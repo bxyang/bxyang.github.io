@@ -1,14 +1,74 @@
-### Welcome to GitHub Pages.
- automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new `gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.
+### 这是一则招聘贴！
 
-### Designer Templates
-We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.
 
-### Creating pages manually
-If you prefer to not use the automatic generator, push a branch named `gh-pages` to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
+##### 滴滴出行智能出行部，司乘定价补贴团队
 
-### Authors and Contributors
-You can @mention a GitHub username to generate a link to their profile. The resulting `<a>` element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (@defunkt), PJ Hyett (@pjhyett), and Tom Preston-Werner (@mojombo) founded GitHub.
+##### 团队属于公司核心业务，欢迎加入
 
-### Support or Contact
-Having trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+##### 简历发送至：yangbaoxing@didichuxing.com
+
+##### 【社招】数据开发工程师(D6/7/8/9/10)
+工作地点：北京中关村软件园1期钻石大厦
+职位类别：技术
+所属部门：智能出行部
+
+职位描述
+从事如下一项或多项富有挑战性和成就感的领域研发工作：
+1. 负责基于数据驱动的在线系统和离线的数据处理系统的设计和开发，支持线上核心业务需求，并保证线上业务的稳定性。
+2. 负责分布式的策略平台架构，构建并优化机器学习在线上业务中的应用和线下迭代的流程，提升算法工程师的工作效率。
+3. 负责大规模机器学习系统的文本、音频、视频等非结构化数据视图系统的设计和开发。
+
+任职要求
+1. 熟悉 Linux 工作环境，具备扎实的计算机网络和操作系统相关知识，熟悉常用的数据结构和算法。
+2. 具备较强的代码能力，熟练掌握Golang、Java、Python、Scala、 C/C++其中一种主流编程语言。熟悉Golang者加分。。
+3. 熟悉主流大数据工具，包括Hadoop、Spark、Storm、Kafka、Hive、HBase、ElasticSearch等。有深入的了解和丰富的使用经验者加分。
+4. 热爱钻研技术，自驱能力强。3年以上相关工作经验，一线互联网背景者加分。
+5. 沟通能力强，能按计划推动项目进展，保证项目质量。有独立设计在线或者离线系统经验者加分。
+6. 了解机器学习相关知识和理论，熟悉常用特征工程的方法，有实际数据挖掘和特征工程经验者加分。
+
+
+##### 【社招】算法策略工程师(D6/7/8/9/10)
+
+工作地点：北京中关村软件园1期钻石大厦
+职位类别：技术
+所属部门：智能出行部
+
+职位描述
+综合使用运筹优化、机器学习和经济学方法，优化平台长期经济收益。
+
+任职要求
+1. 计算机或数学相关专业毕业，有扎实的数据结构和算法基础，或者有较好的数学功底；
+
+2. 在机器学习或数据挖掘方向有较强的积累，熟悉经典的算法并有实践经验优先；
+
+3. 编程基础扎实，熟练使用C++、Go、Java、Scala或Python等一种编程语言，有扎实的数据结构和算法基础；
+
+4. 有使用Hadoop/Hive/Spark分析海量数据的能力和经验；
+
+5. 在机器学习或数据挖掘方向有较强的积累，熟悉经典的算法并有实践经验，包括LR、SVM、GBDT、Reinforcement Learning、Deep Learning；
+
+6. 有学习热情，关注业界前沿技术，follow人工智能国际会议研究动态，不断提升自己在机器学习、运筹优化、机制设计、数理统计。
+
+7. 有顶级会议发表研究成果者优先。
+
+
+
+
+##### 【实习】深度学习算法工程师
+职位类别：技术
+工作地点：北京中关村软件园1期钻石大厦
+职位类别：技术
+所属部门：智能出行部
+
+职位描述：
+1. 从事深度学习，迁移学习，小样本学习相关研究工作
+
+任职要求：  
+1. 逻辑清晰、思维活跃，善于分析和解决问题，有学习热情。
+2. 计算机、统计数学等专业硕士及以上学历，有数据算法方向的项目经验；    
+3. 熟悉TensorFlow/PyTorch等常用深度学习工具；  
+4. 有顶级会议发表研究成果者优先 。
+
+备注：
+这个实习的职位主要是面向研究生一年级，会研究深度学习，迁移学习相关的topic，比较前沿，实习周期比较长。
+如果有相关的博士生小伙伴感兴趣也欢迎，相关的topic可以发论文~ 
