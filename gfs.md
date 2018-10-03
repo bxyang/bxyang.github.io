@@ -51,3 +51,12 @@ API benefits the overall system by increasing our flexibility.
     - 实现文件系统API
     - 和master通信实现对metadata的operations
     - 和chunkserver通信read/write data
+
+## Single Master   
+
+  single master极大的简化了设计，使得master可以利用全局信息make sophisticated chunk placement and replication decisions.
+
+  当然，必须最小化master在文件系统读写中的工作，这样single master才不会成为系统的bottleneck。client never通过master读写file data。client请求mater来获取自己需要和那台chunkserver交互。client从master拿到的信息需要cache。
+
+
+  
