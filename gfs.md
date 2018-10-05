@@ -58,5 +58,54 @@ API benefits the overall system by increasing our flexibility.
 
   当然，必须最小化master在文件系统读写中的工作，这样single master才不会成为系统的bottleneck。client never通过master读写file data。client请求mater来获取自己需要和那台chunkserver交互。client从master拿到的信息需要cache。
 
+## Chunk size
+  64M
 
-  
+## Metadata
+    3种metadata：
+      - the file and chunk namespaces
+      - the mapping from files to chunk
+      - the locations of each chunk's replicas
+    所有的metadata都在内存中，前两种会通过log mutation操作持久化大operation log中，保存在本地磁盘，同时会在其他的机器保存副本。
+    利用log使得更新master的状态简单可靠，不存在master crash后不一致的风险。master不会持久化chunk的location信息，而是当chunkserver加入或者master启动的时候请求chunkserver得到.
+
+### In-Memory Data Structures
+### Chunk Locations
+### Operation Log
+  operation log包含重要metadata变化的历史记录，master利用operation log的checkpoint恢复。
+
+## Consistency Model
+
+### GFS保证
+    File namespace mutations是原子操作。namespace locking保证原子性和正确性，master的operation log定义了operation的
+total order。
+
+
+# System Interactions
+    系统设计是最小化master在所有operation中的参与度。
+    we now describe how the client, master, and chunkservers interact to implement data mutations,
+    atomic record append, and snapshot.
+
+## Leases and Mutation order
+  master通过lease来管理primary和replication和mutation。
+
+## Data Flow
+
+## Atomic Record Appends
+
+## Snapshot   
+
+
+# Master Operation
+## Namespace management and locking
+  GFS没有per-directory的数据结构，来列出一个目录下的所有文件，不支持类似linux中的符号链接，硬链接。
+  GFS保存完成的文件路径和metadata，到一张lookup table。采用前缀压缩，可以高效的在内存中存储这张表。
+  namespace tree中的每个节点都关联一个read-write lock。
+
+  没有directory或者inode-like的数据结构，可以同时并发修改一个目录。
+
+## Replica Placement  
+
+
+
+# Fault Tolerance And Diagnosis
