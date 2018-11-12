@@ -59,3 +59,10 @@ leader approach， raft把一致性问题分解如下三个独立的子问题
 - safety
 
 ## Raft basics
+each server 属于三种状态之一：leader，follower，candidate
+
+raft把时间切分成多个term，每个term长度任意。用连续整数对term编码。
+
+term开始的时候先election，产生一个leader，然后才是normal Operation。
+
+## leader election
