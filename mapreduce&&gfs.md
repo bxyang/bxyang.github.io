@@ -307,8 +307,7 @@ operation log.
 --- 
 # System Interactions
 
-we now describe how the client, master, and chunkservers interact to
-implement data mutations, atomic record append, and snapshot.
+how the client, master, and chunkservers interact to implement data mutations, atomic record append, and snapshot.
 
 ---
 # Leases and Mutation Order
@@ -366,7 +365,62 @@ the secondaries, then we have inconsistent
 state → error returned to client
 - Client can retry steps (3) through (7)
 
+
 ---
+# Data Flow
+Control flows from the client to the primary and then to all secondaries
+
+Data is pushed linearly along a carefully picked chain of chunkservers
+in a pipelined fashion.
+
+
+Pipelining makes use of the full outbound bandwidth for the fastest
+possible transfer, instead of dividing it in a non-linear topology.
+
+
+---
+
+# Atomic Record Appends
+- Client specifies data
+
+- GFS appends it to the file atomically at least once
+	- GFS picks the offset
+	- In contrast, a “regular” append is merely a write at an offset that the client believes to be the current end of file.
+	- Used heavily by Google apps
+  	e.g., for files that serve as multiple-producer/singleconsumer
+queues
+
+---
+# Snapshot
+文件系统快照
+
+---
+
+# Master Operatition
+
+
+
+---
+# Namespace Management and Locking
+When there are leases in the chunk server, those leases are granted only through master. GFS logically represents its namespace as a lookup table mapping full pathnames to metadata. With prefix compression, this table can be efficiently represented in memory. Each node in the namespace tree (either an absolute file name or an absolute directory name) has an associated read-write lock.
+
+
+---
+# Replica Placement
+
+---
+# Creation, Re-replication, Rebalancing
+
+
+---
+# Garbage Collection
+
+---
+# Stale Replica Detection
+
+---
+
+
 # MapReduce: Simplified Data Processing on Large Clusters(2004)
 
 Jeff Dean, Sanjay Ghemawat
@@ -542,5 +596,7 @@ Ref:
 https://ijcsit.com/docs/Volume%205/vol5issue03/ijcsit20140503234.pdf
 https://cs.stanford.edu/~matei/courses/2015/6.S897/slides/gfs.pdf
 https://web.cs.wpi.edu/~rek/DCS/D04/DFS.pdf
-
+http://www.ccs.neu.edu/home/ntuck/courses/2016/09/cs6240/notes/Handouts/Module2-L2-handout.pdf
+http://google-file-system.wikispaces.asu.edu/
+http://prof.ict.ac.cn/DComputing/uploads/2013/DC_4_0_GFS_ICT.pdf
 ---
