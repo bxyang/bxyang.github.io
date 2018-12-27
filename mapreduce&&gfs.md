@@ -116,10 +116,18 @@ structured data that is designed to scale to a very large size: petabytes of dat
 ---
 # The Google File System(2003)
 
+
+
+<img src="image/jeff.jpeg" height=500 align=right />
+
+Sanjay Ghemawat
+Howard Gobioff
+Shun-Tak Leung
+
 A scalable distributed file system for large distributed data-intensive applications.
 
-
-Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung
+[Jeff Dean的激荡人生：我和Sanjay在同一台电脑上写代码](
+https://mp.weixin.qq.com/s/s-_Z_sM7WmyizVDtgW-UYQ)
 
 ---
 # File System
@@ -198,7 +206,12 @@ high aggregate performance to a large number of clients.
 ---
 
 # Design Overview
-
+- Assumptions
+- Interface
+- Architecture
+- Single Master
+- Metadata
+- Consistency Model
 
 ---
 
@@ -237,6 +250,16 @@ GFS cluster consists of a single master and multiple chunkservers and is accesse
 
 <img src="image/gfs_arch.png" height=400 align=middle />
 
+---
+
+# Architecture
+
+- Very important: data flow is decoupled from control flow
+	- Clients interact with the master for metadata operations
+	- Clients interact directly with chunkservers for all files operations
+	- This means performance can be improved by scheduling expensive data flow based on the network topology
+- Neither the clients nor the chunkservers cache file data
+	- Working sets are usually too large to be cached, chunkservers can use Linux’s buffer cache
 
 ---
 
@@ -259,6 +282,14 @@ GFS cluster consists of a single master and multiple chunkservers and is accesse
    		- chunk migration between chunkservers.
    - The master periodically communicates with each chunkserver in HeartBeat messages to give it instructions and collect its state.
 
+---
+
+
+# Client
+- 实现文件系统API
+- 和master通信实现对metadata的operations
+- 和chunkserver通信read/write data
+
 --- 
 # Single Master
 
@@ -266,13 +297,6 @@ single master极大的简化了设计，使得master可以利用全局信息make
 
 当然，必须最小化master在文件系统读写中的工作，这样single master才不会成为系统的bottleneck。client never通过master读写file data。client请求mater来获取自己需要和那台chunkserver交互。client从master拿到的信息需要cache。
 
-
----
-
-# Client
-- 实现文件系统API
-- 和master通信实现对metadata的operations
-- 和chunkserver通信read/write data
 
 ---
 # Metadata
@@ -293,19 +317,14 @@ operation log.
 ---
 # Consistency Model
 
----
 
-# Architecture
-
-- Very important: data flow is decoupled from control flow
-	- Clients interact with the master for metadata operations
-	- Clients interact directly with chunkservers for all files operations
-	- This means performance can be improved by scheduling expensive data flow based on the network topology
-- Neither the clients nor the chunkservers cache file data
-	- Working sets are usually too large to be cached, chunkservers can use Linux’s buffer cache
 
 --- 
 # System Interactions
+- Leases and Mutation Order
+- Data Flow
+- Atomic Record Appends
+- Snapshot
 
 how the client, master, and chunkservers interact to implement data mutations, atomic record append, and snapshot.
 
@@ -394,15 +413,40 @@ queues
 # Snapshot
 文件系统快照
 
+Copy-On-Write 写时复制技术
+<img src="image/fork1.png" width=400 align=left />
+
+<img src="image/fork2.png" width=400 align=right />
+
+---
+
+每当 Master 收到 Snapshot 请求时，
+
+1. Master 首先并不是进行映像的复制操作，而是查询租约的拥有者即 Primary 并通知它，保证 Master 可以获取到后续的所有读写操作的请求。
+
+2. 复制metadata
+
+3. 当后续产生写操作时，Master 就会通知所有该 chunk 的 replicas，将该 chunk 进行复制备份，产生另外一个 chunk 映像，然后将映像地址返回给 client 让其进行读写，而原来的 chunk 就自然形成了一个 snapshot，不会再对其进行修改。
+
+
+
+
 ---
 
 # Master Operatition
-
+- Namespace Management and Locking
+- Replica Placement
+- Creation, Re-replication, Rebalancing
+- Garbage Collection
+- Stale Replica Detection
 
 
 ---
 # Namespace Management and Locking
-When there are leases in the chunk server, those leases are granted only through master. GFS logically represents its namespace as a lookup table mapping full pathnames to metadata. With prefix compression, this table can be efficiently represented in memory. Each node in the namespace tree (either an absolute file name or an absolute directory name) has an associated read-write lock.
+When there are leases in the chunk server, those leases are granted only through master.
+GFS logically represents its namespace as a lookup table mapping full pathnames to metadata. 
+  - With prefix compression, this table can be efficiently represented in memory. 
+Each node in the namespace tree (either an absolute file name or an absolute directory name) has an associated read-write lock.
 
 
 ---
