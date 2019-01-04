@@ -452,6 +452,15 @@ Each node in the namespace tree (either an absolute file name or an absolute dir
 ---
 # Replica Placement
 
+Serves two purposes
+- Maximize data reliability and availability
+- Maximize network bandwidth utilization
+
+Spread chunk replicas across racks
+- To ensure chunk survivability
+- To exploit aggregate read bandwidth of multiple racks
+- write traffic has to flow through multiple racks
+
 ---
 # Creation, Re-replication, Rebalancing
 
@@ -643,4 +652,8 @@ https://web.cs.wpi.edu/~rek/DCS/D04/DFS.pdf
 http://www.ccs.neu.edu/home/ntuck/courses/2016/09/cs6240/notes/Handouts/Module2-L2-handout.pdf
 http://google-file-system.wikispaces.asu.edu/
 http://prof.ict.ac.cn/DComputing/uploads/2013/DC_4_0_GFS_ICT.pdf
+https://ucbrise.github.io/cs262a-spring2018/notes/17-GFS-BigTable.pdf
+https://web.eecs.umich.edu/~manosk/assets/slides/w18/GFS.pdf
+https://www.slideshare.net/romain_jacotin/the-google-file-system-gfs
+
 ---
