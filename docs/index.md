@@ -4,7 +4,7 @@ layout: home
 hero:
   name: bxyang
   text: 路漫漫其修远兮，吾将上下而求索
-  tagline: 大规模机器学习 · 推荐与定价 · 分布式系统
+  tagline: AI Evaluations · Evidence Centred Design · Post-training
   image:
     src: https://avatars.githubusercontent.com/u/4447765?v=4
     alt: bxyang

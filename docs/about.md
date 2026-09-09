@@ -8,7 +8,8 @@ title: 关于
 >
 > ——屈原《离骚》
 
-bxyang，北京。做大规模机器学习相关的工作，方向涉及推荐排序、广告 CTR 预估、智能定价。
+bxyang，北京。目前关注 **AI Evaluations**（模型评测）、**Evidence Centred Design**（证据中心设计）
+与 **Post-training**（后训练）。
 
 这个站点用来放读书笔记和技术整理，主要为**自己理清楚**而写，顺带公开。
 
