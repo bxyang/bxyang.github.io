@@ -1,4 +1,6 @@
-# 杨宝兴的个人站点
+# bxyang 的个人站点
+
+> 路漫漫其修远兮，吾将上下而求索
 
 VitePress + GitHub Pages。源文件是 `docs/` 下的 Markdown，push 到 `master` 后由 GitHub Actions 自动构建发布。
 

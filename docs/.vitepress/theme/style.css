@@ -24,6 +24,35 @@
   letter-spacing: 0.5px;
 }
 
+/* hero 引言：衬线体 + 字距，突出「路漫漫其修远兮」 */
+.home-hero .text {
+  font-family: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC",
+    "SimSun", serif;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-hero .tagline {
+  letter-spacing: 0.02em;
+}
+
+/* 页面引言块 */
+.vp-doc blockquote {
+  font-family: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC",
+    "SimSun", serif;
+  letter-spacing: 0.08em;
+  border-left: 2px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 18px;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+}
+
 /* 文章列表 */
 .post-list {
   margin-top: 24px;

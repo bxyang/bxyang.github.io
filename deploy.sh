@@ -43,7 +43,7 @@ case "$ans" in
 esac
 
 git add -A
-git -c user.name="yangbaoxing" -c user.email="yangbaoxing@gmail.com" \
+git -c user.name="bxyang" -c user.email="yangbaoxing@gmail.com" \
     commit -m "更新个人主页 $(date +%Y-%m-%d)"
 
 echo ">> 推送到 $BRANCH…"
