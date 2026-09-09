@@ -7,7 +7,6 @@
 - `index.html` — 主页（静态，无 Jekyll front matter）
 - `assets/style.css` — 样式
 - `bxy_jc.jpeg` — 婚纱照（**仅留作个人文件，不在主页引用**）
-- `yangbaoxing.md` — 简历 Markdown 原文（主页「简历」按钮跳转此处）
 - `*.md` — 旧的技术笔记（GFS / Raft / CTR / 因果推断）
 - `image/`, `ctr_intr_img/` — 笔记配图
 - `_config.yml` — Jekyll 配置（继续渲染 `.md` 笔记）
@@ -25,7 +24,7 @@ python3 -m http.server 8000
 
 - 个人信息、经历、笔记链接：直接编辑 `index.html`
 - 配色 / 间距：编辑 `assets/style.css`
-- 简历原文：编辑 `yangbaoxing.md`（同步更新 `index.html` 中的经历条目）
+- 经历 / 技能 / 笔记链接：直接编辑 `index.html`（简历内容已内联在主页中）
 
 ## 部署
 
