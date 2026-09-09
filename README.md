@@ -60,10 +60,18 @@ description: 一句话摘要，会显示在文章列表里
 
 ## 发布
 
-首次部署需要在 GitHub 网页上做一次设置：
-仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
+**必须**在 GitHub 网页上把构建源设成 Actions，否则站点会出错：
+仓库 **Settings → Pages → Source → GitHub Actions**（不是 "Deploy from a branch"）。
 
-之后每次 push 到 `master`，Actions 自动构建并发布到 https://bxyang.github.io 。
+如果 Source 还是「从分支部署」，GitHub 会额外跑一个叫 `pages build and deployment` 的
+Jekyll 构建，和本仓库的 Actions 工作流**抢着发布同一个站点**——两个都会成功，谁最后跑完
+谁生效，站点内容会来回跳，而且 Jekyll 那一版会把 `README.md` 当首页渲染，`/posts`、
+`/tags`、`/about` 全是 404。
+
+判定方法：看线上页面源码里的 `<meta name="generator">`。是 `VitePress` 就对了，
+是 `Jekyll` 说明构建源没改对。
+
+设置改好后，每次 push 到 `master`，Actions 自动构建并发布到 https://bxyang.github.io 。
 
 注意：本仓库的 `.md` 必须是 UTF-8 编码。历史上有两个 GBK 编码的简历文件导致 Jekyll
 构建静默失败过（Pages 会继续服务上一次成功的构建，不报错），排查时看响应头
