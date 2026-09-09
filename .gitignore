@@ -1,3 +1,7 @@
 .workbuddy/
 .DS_Store
 *.swp
+node_modules/
+.npm-cache/
+docs/.vitepress/dist/
+docs/.vitepress/cache/

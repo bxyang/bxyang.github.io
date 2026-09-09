@@ -1,60 +1,72 @@
-# yangbaoxing.github.io
+# 杨宝兴的个人站点
 
-个人主页，基于 GitHub Pages。
+VitePress + GitHub Pages。源文件是 `docs/` 下的 Markdown，push 到 `master` 后由 GitHub Actions 自动构建发布。
 
 ## 目录结构
 
-- `index.html` — 主页（静态，无 Jekyll front matter）
-- `assets/style.css` — 样式
-- `bxy_jc.jpeg` — 婚纱照（**仅留作个人文件，不在主页引用**）
-- `*.md` — 旧的技术笔记（GFS / Raft / CTR / 因果推断）
-- `image/`, `ctr_intr_img/` — 笔记配图
-- `_config.yml` — Jekyll 配置（继续渲染 `.md` 笔记）
-- `deploy.sh` — 一键部署脚本
+```
+docs/
+  .vitepress/
+    config.mts          站点配置（导航、搜索、中文文案）
+    theme/
+      index.ts          主题入口
+      style.css         自定义样式（文章列表、标签、字体）
+      posts.data.ts     文章数据加载器（自动汇总 posts/*.md）
+  index.md              首页：hero + 最新文章
+  posts.md              全部文章（按年份分组）
+  tags.md               标签聚合页
+  about.md              关于
+  posts/*.md            文章，一篇一个文件
+  public/archive/       2018–2019 旧笔记，原样保留可下载
+.github/workflows/
+  deploy.yml            Actions 构建与部署
+```
 
 ## 本地预览
 
 ```bash
-cd /Users/ridgway/WorkBuddy/personal_site
-python3 -m http.server 8000
-# 浏览器打开 http://localhost:8000
+npm install          # 首次
+npm run docs:dev     # 开发模式，热更新 http://localhost:5173
+npm run docs:build   # 构建到 docs/.vitepress/dist
+npm run docs:preview # 预览构建结果 http://localhost:4173
 ```
 
-## 修改内容
-
-- 个人信息、经历、笔记链接：直接编辑 `index.html`
-- 配色 / 间距：编辑 `assets/style.css`
-- 经历 / 技能 / 笔记链接：直接编辑 `index.html`（简历内容已内联在主页中）
-
-## 部署
-
-执行 `bash deploy.sh`，脚本会：
-
-1. clone `bxyang/bxyang.github.io` 到临时目录
-2. 用本地文件覆盖
-3. 列出变更，等你确认
-4. 提交并推送到 `master` 分支
-
-推送后 GitHub Pages 通常 1–3 分钟内生效。
-
-## 部署 / SSH 免密
-
-`deploy.sh` 默认走 **SSH**（`git@github.com:bxyang/bxyang.github.io.git`），配好公钥后 push 无需密码或 token。
-
-本机 SSH 已配置：
-
-- 密钥：`~/.ssh/id_ed25519`（ed25519，无 passphrase，已加入 ssh-agent）
-- `~/.ssh/config` 指定 github.com 使用该密钥
-- `known_hosts` 已写入 GitHub 官方指纹（ED25519 `SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU`）
-
-如果还没把公钥加到 GitHub：
+沙箱环境里 npm/node 被文件代理拦截，需要绕开：
 
 ```bash
-cat ~/.ssh/id_ed25519.pub | pbcopy   # 复制公钥
-# GitHub → Settings → SSH and GPG keys → New SSH key → 粘贴保存
-ssh -T git@github.com                # 出现 Hi bxyang! 即为成功
+env -u NODE_OPTIONS npm run docs:build
 ```
 
-改用 HTTPS + token 推送的话，把 `deploy.sh` 里的 `REPO` 换成
-`https://github.com/bxyang/bxyang.github.io.git`，密码框填 Personal Access Token
-（fine-grained，只勾 Contents 读写）。
+## 写一篇新文章
+
+在 `docs/posts/` 下新建 `.md`，文件名用英文短横线，例如 `posts/rl-notes.md`：
+
+```markdown
+---
+title: 文章标题
+date: '2026-09-09'
+tags: [标签1, 标签2]
+description: 一句话摘要，会显示在文章列表里
+---
+
+正文。支持 LaTeX 公式、代码块高亮。
+```
+
+然后 `git push` 即可。首页、文章列表、标签页都是自动生成的，不用手改索引。
+
+`date` 建议加引号，否则 YAML 会解析成日期对象。
+
+## 发布
+
+首次部署需要在 GitHub 网页上做一次设置：
+仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
+
+之后每次 push 到 `master`，Actions 自动构建并发布到 https://bxyang.github.io 。
+
+注意：本仓库的 `.md` 必须是 UTF-8 编码。历史上有两个 GBK 编码的简历文件导致 Jekyll
+构建静默失败过（Pages 会继续服务上一次成功的构建，不报错），排查时看响应头
+`last-modified` 和 Actions 运行记录。
+
+## 注意
+
+`bxy_jc.jpeg` 是私人照片，不在站点中引用。

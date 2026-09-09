@@ -1,0 +1,17 @@
+{
+  "name": "bxyang-personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "杨宝兴的个人站点，基于 VitePress + GitHub Pages。",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.4"
+  }
+}
