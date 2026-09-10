@@ -148,3 +148,83 @@
     gap: 4px;
   }
 }
+
+/* 公司索引页 */
+.company-group {
+  margin: 32px 0 8px;
+}
+
+.company-group-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  border: none;
+  padding: 0;
+}
+
+.company-group-count {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+  margin-left: 6px;
+}
+
+.company-group-desc {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.company-card {
+  display: block;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.company-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.company-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.company-card-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.company-card-year {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.company-card-summary {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--vp-c-text-2);
+}
+
+.company-card-more {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--vp-c-brand-1);
+}

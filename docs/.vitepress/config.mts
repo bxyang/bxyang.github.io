@@ -21,10 +21,50 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '文章', link: '/posts' },
+      { text: '公司', link: '/companies' },
       { text: '标签', link: '/tags' },
       { text: '归档', link: '/archive/gfs.md' },
       { text: '关于', link: '/about' }
     ],
+
+    sidebar: {
+      '/companies': [
+        {
+          text: '专家数据',
+          collapsed: false,
+          items: [
+            { text: 'Surge AI', link: '/companies/surge-ai' },
+            { text: 'Mercor', link: '/companies/mercor' },
+            { text: 'Handshake AI', link: '/companies/handshake-ai' },
+            { text: 'Turing', link: '/companies/turing' },
+            { text: 'micro1', link: '/companies/micro1' },
+            { text: 'Invisible Technologies', link: '/companies/invisible' }
+          ]
+        },
+        {
+          text: '平台与工具',
+          collapsed: false,
+          items: [
+            { text: 'Scale AI', link: '/companies/scale-ai' },
+            { text: 'Labelbox', link: '/companies/labelbox' },
+            { text: 'Snorkel AI', link: '/companies/snorkel-ai' },
+            { text: 'Encord', link: '/companies/encord' }
+          ]
+        },
+        {
+          text: 'RL 环境',
+          collapsed: false,
+          items: [
+            { text: 'Prime Intellect', link: '/companies/prime-intellect' },
+            { text: 'Mechanize', link: '/companies/mechanize' },
+            { text: 'Bespoke Labs', link: '/companies/bespoke-labs' },
+            { text: 'Patronus AI', link: '/companies/patronus-ai' },
+            { text: 'Fleet AI', link: '/companies/fleet-ai' },
+            { text: 'Andon Labs', link: '/companies/andon-labs' }
+          ]
+        }
+      ]
+    },
 
     search: {
       provider: 'local',

@@ -14,8 +14,11 @@ docs/
       index.ts          主题入口
       style.css         自定义样式（文章列表、标签、字体）
       posts.data.ts     文章数据加载器（自动汇总 posts/*.md）
+      companies.data.ts 公司数据加载器（自动汇总 companies/*.md）
   index.md              首页：hero + 最新文章
   posts.md              全部文章（按年份分组）
+  companies.md          训练数据公司索引（按层分组）
+  companies/*.md        每家公司一页：基本盘 / 发表的工作 / 讨论与总结
   tags.md               标签聚合页
   about.md              关于
   posts/*.md            文章，一篇一个文件
@@ -57,6 +60,33 @@ description: 一句话摘要，会显示在文章列表里
 然后 `git push` 即可。首页、文章列表、标签页都是自动生成的，不用手改索引。
 
 `date` 建议加引号，否则 YAML 会解析成日期对象。
+
+## 加一家公司
+
+在 `docs/companies/` 下新建 `.md`，例如 `companies/foo-ai.md`：
+
+```markdown
+---
+title: Foo AI
+category: 专家数据          # 专家数据 / 平台与工具 / RL 环境
+founded: '2024'
+site: https://foo.ai
+order: 7                    # 同层内的排序
+summary: '一句话定位'
+---
+
+[← 返回公司索引](/companies)
+
+# Foo AI
+
+## 基本盘
+## 发表的工作
+## 讨论与总结
+## 可以先想的问题
+```
+
+索引页 `/companies` 自动收录（按 category 分组、按 order 排序）。
+侧边栏需要手动在 `docs/.vitepress/config.mts` 的 `sidebar['/companies']` 里加一行。
 
 ## 发布
 
