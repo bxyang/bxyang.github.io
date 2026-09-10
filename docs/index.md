@@ -13,14 +13,16 @@ hero:
       text: 全部文章
       link: /posts
     - theme: alt
-      text: 关于我
-      link: /about
+      text: 训练数据公司
+      link: /companies
 
 features:
-  - title: 笔记为主
-    details: 论文阅读、技术整理、踩坑记录。写给自己看，也欢迎别人看。
-  - title: 支持公式
-    details: Markdown + LaTeX，数学推导和代码高亮都能正常渲染。
+  - title: 论文笔记
+    details: 读一篇记一篇，重点是能回头用的推导和结论，不是摘要。
+  - title: 公司研究
+    details: 训练数据 / 评测这个赛道的公司与他们发表的工作，逐篇梳理并附讨论。
+  - title: 公式与代码
+    details: Markdown + LaTeX，数学推导和代码块高亮都能正常渲染。
   - title: 全站搜索
     details: 左上角搜索框，本地索引，离线可用。
 ---
