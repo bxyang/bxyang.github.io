@@ -7,7 +7,7 @@ order: 4
 summary: '从工程师外包转 LLM 后训练，是这批公司里少数明确盈利的一家，正在往 RL 环境和多模态 agent 训练延伸。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Turing
 

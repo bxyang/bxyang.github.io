@@ -17,7 +17,7 @@ docs/
       companies.data.ts 公司数据加载器（自动汇总 companies/*.md）
   index.md              首页：hero + 最新文章
   posts.md              全部文章（按年份分组）
-  companies.md          训练数据公司索引（按层分组）
+  companies.md          公司研究索引（按层分组）
   companies/*.md        每家公司一页：基本盘 / 发表的工作 / 讨论与总结
   tags.md               标签聚合页
   about.md              关于
@@ -61,7 +61,7 @@ description: 一句话摘要，会显示在文章列表里
 
 `date` 建议加引号，否则 YAML 会解析成日期对象。
 
-## 加一家公司
+## 加一家公司（「公司研究」板块）
 
 在 `docs/companies/` 下新建 `.md`，例如 `companies/foo-ai.md`：
 

@@ -7,7 +7,7 @@ order: 1
 summary: '110 人、从不融资，靠质量溢价做到十亿美元级营收，是 Meta 交易后前沿实验室的最大受益者。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Surge AI
 

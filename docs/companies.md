@@ -1,6 +1,6 @@
 ---
-title: 训练数据公司
-description: 大模型训练数据（专家数据 / 平台工具 / RL 环境）领域的公司索引与论文梳理
+title: 公司研究
+description: 训练数据与评测赛道上的公司与他们发表的工作——索引、论文链接与讨论
 ---
 
 <script setup>
@@ -20,7 +20,7 @@ for (const name of GROUP_ORDER) {
 }
 </script>
 
-# 训练数据公司
+# 公司研究
 
 一批专门给前沿实验室供训练数据和评测的公司。2025 年 6 月 Meta 用 143 亿美元拿了 Scale AI 49% 股份并把 Alexandr Wang 挖走，OpenAI / Google / xAI 几周内集体撤单——**中立性突然变成这个行业最重要的产品属性**。钱从 Scale 流向了下面这批公司。
 

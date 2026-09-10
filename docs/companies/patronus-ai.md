@@ -7,7 +7,7 @@ order: 4
 summary: '企业自动化评测与安全平台起家，用 FinanceBench 打出名气，现在做压力测试 agent 的「数字世界」。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Patronus AI
 

@@ -7,7 +7,7 @@ order: 1
 summary: '开源「自主训练栈」：算力 + RL 环境 + 评测 + 部署，主张企业自己训模型而不依赖前沿实验室。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Prime Intellect
 

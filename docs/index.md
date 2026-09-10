@@ -13,7 +13,7 @@ hero:
       text: 全部文章
       link: /posts
     - theme: alt
-      text: 训练数据公司
+      text: 公司研究
       link: /companies
 
 features:

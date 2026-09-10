@@ -7,7 +7,7 @@ order: 5
 summary: '把 Salesforce、Excel 这类企业软件复刻成训练环境。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Fleet AI
 

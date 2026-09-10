@@ -7,7 +7,7 @@ order: 2
 summary: '前 Epoch AI 三人组创办的 stealth 公司，只做少量极高保真度的环境，直接供给前沿实验室。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Mechanize
 

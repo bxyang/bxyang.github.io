@@ -7,7 +7,7 @@ order: 6
 summary: '流程外包起家，做 AI 训练 + 运营外包的完整管线，客户偏企业与云厂商。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Invisible Technologies
 

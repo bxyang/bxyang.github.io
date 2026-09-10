@@ -7,7 +7,7 @@ order: 6
 summary: '把 agent 真的放进现实世界跑生意：自动贩卖机、咖啡馆、电台、无人机——用真实后果测长程一致性。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Andon Labs
 

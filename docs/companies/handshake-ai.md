@@ -7,7 +7,7 @@ order: 3
 summary: '校园招聘网络转型，把 1800 万学生的供给直接换成后训练数据收入，是转型最快的一家。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Handshake AI
 

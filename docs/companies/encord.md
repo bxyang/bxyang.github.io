@@ -7,7 +7,7 @@ order: 4
 summary: '视频与多模态标注平台，深做帧级/对象级工具与自动 QA。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Encord
 

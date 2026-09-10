@@ -7,7 +7,7 @@ order: 5
 summary: '用 AI 面试官「Zara」筛专家，八个月把 gross run-rate 从 $100M 做到 $500M，公开对标 Scale/Surge/Mercor。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # micro1
 

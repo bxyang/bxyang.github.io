@@ -21,7 +21,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '文章', link: '/posts' },
-      { text: '公司', link: '/companies' },
+      { text: '公司研究', link: '/companies' },
       { text: '标签', link: '/tags' },
       { text: '归档', link: '/archive/gfs.md' },
       { text: '关于', link: '/about' }
@@ -29,6 +29,7 @@ export default defineConfig({
 
     sidebar: {
       '/companies': [
+        { text: '概览', link: '/companies' },
         {
           text: '专家数据',
           collapsed: false,

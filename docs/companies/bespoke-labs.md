@@ -7,7 +7,7 @@ order: 3
 summary: '造一整家「假公司」（代码库、工单、Slack 记录）让 agent 在里面 rehearsal。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Bespoke Labs
 

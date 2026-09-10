@@ -7,7 +7,7 @@ order: 3
 summary: '斯坦福系，程序化标注（弱监督）的学术源头，正在从「用代码生成标签」转向专家数据服务。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Snorkel AI
 

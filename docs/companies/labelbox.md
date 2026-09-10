@@ -7,7 +7,7 @@ order: 2
 summary: '标注平台 + Alignerr 专家服务，卖软件与工作流，客户自己跑项目。'
 ---
 
-[← 返回公司索引](/companies)
+[← 返回公司研究](/companies)
 
 # Labelbox
 
