@@ -17,8 +17,10 @@ docs/
       companies.data.ts 公司数据加载器（自动汇总 companies/*.md）
   index.md              首页：hero + 最新文章
   posts.md              全部文章（按年份分组）
-  companies.md          公司研究索引（按层分组）
-  companies/*.md        每家公司一页：基本盘 / 发表的工作 / 讨论与总结
+  companies.md          公司研究索引（按业务分组）
+  companies/*.md        每家公司一页：创始人 / 发展过程 / 业务 / 时间线
+  companies/*/*.md      每项工作一页，自动汇入公司时间线
+  research.md           全部工作，支持公司与关键词筛选
   tags.md               标签聚合页
   about.md              关于
   posts/*.md            文章，一篇一个文件
@@ -79,14 +81,56 @@ summary: '一句话定位'
 
 # Foo AI
 
-## 基本盘
-## 发表的工作
-## 讨论与总结
-## 可以先想的问题
+## 创始人背景
+## 发展过程
+## 目前的主营业务
+## 论文、基准与产品时间线
+
+<CompanyWorks company="foo-ai" />
+
+## 参考资料
 ```
 
 索引页 `/companies` 自动收录（按 category 分组、按 order 排序）。
 侧边栏需要手动在 `docs/.vitepress/config.mts` 的 `sidebar['/companies']` 里加一行。
+
+### 添加一项工作
+
+在公司对应目录中创建文件，例如 `docs/companies/foo-ai/example-bench.md`：
+
+```markdown
+---
+title: Example Bench：专业任务评测
+company: foo-ai
+date: '2026-08-01'
+dateLabel: '2026-08-01'
+kind: 基准
+description: 一句话介绍任务和用途。
+reviewed: '2026-09-09'
+---
+
+[← Foo AI](/companies/foo-ai) · [全部工作](/research)
+
+# Example Bench：专业任务评测
+
+说明发布时间、公司的具体参与方式。
+
+## 工作内容
+
+介绍任务输入、执行过程、方法与评价方式。
+
+## 数据与使用范围
+
+说明数据规模、开放情况、实验设置及版本差异。
+
+## 参考资料
+
+- [论文或官方文档](https://example.com)
+```
+
+`works.data.ts` 自动收录 `companies/*/*.md`，按日期排序。日期未知时使用 `date: ''` 和 `dateLabel: '发布日期未披露'`；仅确认年份或月份时保留对应精度。标题、类型和摘要参与工作索引筛选，新增工作无需修改组件或侧边栏。
+
+写作采用简洁、客观的说明，保留关键数字的来源与口径。区分共同作者、数据支持、资助和创办前研究；不使用反问、评论或讨论占位。
 
 ## 发布
 

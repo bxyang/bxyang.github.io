@@ -1,42 +1,46 @@
 ---
-title: micro1
-category: 专家数据
-founded: '2022'
-site: https://micro1.ai
+title: "micro1"
+category: "专家数据"
+founded: "2022"
+site: "https://www.micro1.ai"
 order: 5
-summary: '用 AI 面试官「Zara」筛专家，八个月把 gross run-rate 从 $100M 做到 $500M，公开对标 Scale/Surge/Mercor。'
+summary: "通过 AI 面试筛选专业人才，并提供领域评测、训练数据和机器人示范数据。"
+reviewed: "2026-09-09"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # micro1
 
-> 用 AI 面试官「Zara」筛专家，八个月把 gross run-rate 从 $100M 做到 $500M，公开对标 Scale/Surge/Mercor。
+通过 AI 面试筛选专业人才，并提供领域评测、训练数据和机器人示范数据。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2022，最初是 AI 招聘（AI 面试官 Zara） |
-| **营收信号** | 八个月内 gross run-rate 从 $100M 涨到 $500M；付完专家后净留存 60–70%，净 run-rate $150–200M |
-| **最新估值** | $500M（2025.9 Series A $35M，01 Advisors 领投） |
-| **客户** | 据报道含 Microsoft 与多家财富 100 强 |
-| **其他** | 在自建机器人预训练数据集（让众包工人在家录制日常物体交互）；创始人 Ali Ansari 公开表示不向中国模型公司出售训练数据 |
-| **官网** | <https://micro1.ai> |
+创始人 **Ali Ansari** 在 UC Berkeley 就读期间创业，早期围绕软件工程人才匹配开展业务。公司沿用 AI 面试系统 Zara 来评估技能，再将人才网络扩展到模型训练与评测。[公司新闻索引](https://www.micro1.ai/newsroom)
 
-## 发表的工作
+Ansari 参与署名 Zara 的技术论文。该论文研究面试练习、反馈生成与候选人问答，并不能单独证明 AI 面试对所有人群具有同样的准确率。[Zara 论文](https://arxiv.org/abs/2507.02869)
 
-_暂无公开发表的论文或基准。_
+## 发展过程
 
-::: tip 备注
-没有正式论文。
-:::
+- **2022 年起**：经营技术人才相关业务，随后将 AI 面试发展成产品。
+- **2025 年**：发表招聘与面试系统研究；9 月宣布 3,500 万美元 A 轮融资，公告将业务分为 AI 面试、人才绩效管理和前沿模型数据平台。[融资公告](https://www.micro1.ai/series-a)
+- **2026 年**：公开业务包括 Realm、Cortex 和 Robotics；研究扩展到法律、病理报告、财务、合同及长文档抽取。
 
-## 讨论与总结
+## 目前的主营业务
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+**Realm** 面向模型实验室提供领域评测和 RL 环境；**Cortex** 面向企业 agent 的评测与改进；**Robotics** 收集专家示范和人类操作数据。人才侧仍通过 Zara 进行按技能设置的语音面试。[研究及产品入口](https://www.micro1.ai/research)
 
-## 可以先想的问题
+官网研究栏目同时包含实验论文、benchmark 和产业论述。下方按类型区分，理论文章中的预测不作为已经发生的行业事实。
 
-- 专家市场模型在很少的资本下就能复制——这对 Surge 的护城河意味着什么？
-- 「现成数据集卖给多个买家」（毛利 80–90%）与「定制数据」之间的取舍：复用性 vs 独占性。
+## 论文、基准与产品时间线
+
+<CompanyWorks company="micro1" />
+
+## 参考资料
+
+- [micro1：Series A，2025-09-12](https://www.micro1.ai/series-a)
+- [micro1：Research](https://www.micro1.ai/research)
+- [micro1：Newsroom](https://www.micro1.ai/newsroom)
+- [micro1：Expert Introduction](https://library.micro1.ai/getting-started/introduction)
+
+资料核对截至 2026 年 9 月 9 日。公司参与方式及开放范围见各项工作页面。

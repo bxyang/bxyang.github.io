@@ -1,47 +1,46 @@
 ---
-title: Patronus AI
-category: RL 环境
-founded: '2023'
-site: https://patronus.ai
+title: "Patronus AI"
+category: "RL 环境"
+founded: "2023"
+site: "https://patronus.ai"
 order: 4
-summary: '企业自动化评测与安全平台起家，用 FinanceBench 打出名气，现在做压力测试 agent 的「数字世界」。'
+summary: "从 LLM 自动评测和幻觉检测扩展到 agent 轨迹、记忆与数字环境模拟。"
+reviewed: "2026-09-09"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Patronus AI
 
-> 企业自动化评测与安全平台起家，用 FinanceBench 打出名气，现在做压力测试 agent 的「数字世界」。
+从 LLM 自动评测和幻觉检测扩展到 agent 轨迹、记忆与数字环境模拟。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2023，两位前 Meta 研究员创办 |
-| **融资** | 2026.6 Series B $50M（Greenfield Partners 领投），累计 $70M；据报道一年内营收增长约 15 倍 |
-| **定位** | 企业 LLM 评测与幻觉检测；现扩展到「数字世界」环境：复刻真实网站与内部系统来压力测试 agent |
-| **官网** | <https://patronus.ai> |
+**Anand Kannappan 与 Rebecca Qian** 共同创办 Patronus AI，分别担任 CEO 和 CTO。两人此前从事 Meta 的机器学习研究与工程工作，创业早期聚焦企业部署模型时的准确性、安全性和自动评测。[公司融资公告](https://patronus.ai/announcements/patronus-ai-raises-17-million-to-detect-llm-mistakes-at-scale)
 
-## 发表的工作
+两位创始人共同署名多项公司研究，包括 FinanceBench、Lynx、GLIDER 和 TRAIL。其公开技术轨迹从回答质量评估逐步扩展到 agent 行为与环境模拟。[研究目录](https://patronus.ai/research)
 
-### FinanceBench: A New Benchmark for Financial Question Answering
+## 发展过程
 
-10,231 道关于上市公司的开卷金融问答，附答案与证据串，来源包括 SEC 10-K/10-Q/8-K、财报、电话会纪要。测试 16 种模型配置（GPT-4-Turbo、Llama 2、Claude 2，分别配向量库与长上下文），人工复核 150 题的 2400 个回答。核心结论：GPT-4-Turbo 配检索系统有 81% 答错或拒答；长上下文能改善但延迟不可接受。开源 150 题样本。
+- **2023 年**：公司公开推出评测平台，发布 FinanceBench。
+- **2024 年**：推出 CopyrightCatcher、Lynx/HaluBench 和 GLIDER，扩大自动化评测功能。
+- **2025 年**：研究扩展到搜索、轨迹错误定位和长期记忆，发布 BLUR、TRAIL、MEMTRACK 等。
+- **2026 年**：继续研究代码环境中的奖励异常与数字世界模拟，并公布新融资和模拟训练方向。[研究目录](https://patronus.ai/research)
 
-- [arXiv:2311.11944](https://arxiv.org/abs/2311.11944)
-- [HuggingFace](https://huggingface.co/datasets/PatronusAI/financebench)
-- [GitHub](https://github.com/patronus-ai/financebench)
+## 目前的主营业务
 
-::: tip 备注
-作者列表里有 Bertie Vidgen——他现在是 Mercor APEX 系列的主通讯作者。从 FinanceBench（企业 RAG 评测）到 APEX（专家经济价值），可以看到一条清晰的评测方法论脉络。
-:::
+公开业务覆盖评测模型、自动化验证、agent 行为分析与模拟环境。FinanceBench 等是任务数据集，Lynx 与 GLIDER 是评测模型，Percival 属于应用产品，三者用途不同。
 
-## 讨论与总结
+官网研究目录存在将 TRACE 与 DETOUR 指向同一论文的情况；本站按已核实的论文标题与内容收录，避免重复计算。
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+## 论文、基准与产品时间线
 
-## 可以先想的问题
+<CompanyWorks company="patronus-ai" />
 
-- 「81% 答错或拒答」这个数字里，有多少是检索的问题、多少是模型的问题？这种归因方式站得住吗？
-- 长上下文「能改善但不实用」——这个权衡今天还成立吗？
-- 从「评测平台」到「数字世界环境」，中间的逻辑是什么？
+## 参考资料
+
+- [Patronus AI：Company](https://patronus.ai/company)
+- [Patronus AI：Series A，2024-05-22](https://patronus.ai/announcements/patronus-ai-raises-17-million-to-detect-llm-mistakes-at-scale)
+- [Patronus AI：Research Hub](https://patronus.ai/research)
+
+资料核对截至 2026 年 9 月 9 日。公司参与方式及开放范围见各项工作页面。

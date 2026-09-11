@@ -1,56 +1,51 @@
 ---
-title: Scale AI
-category: 平台与工具
-founded: '2016'
-site: https://scale.com
+title: "Scale AI"
+category: "平台与工具"
+founded: "2016"
+site: "https://scale.com"
 order: 1
-summary: '定义了「数据标注」这个品类，2025 年被 Meta 持股 49% 后失去中立性，前沿实验室订单大量流失，现主攻政府与企业。'
+summary: "提供数据标注、模型训练与评测服务，以及企业和政府 AI 应用。"
+reviewed: "2026-09-10"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Scale AI
 
-> 定义了「数据标注」这个品类，2025 年被 Meta 持股 49% 后失去中立性，前沿实验室订单大量流失，现主攻政府与企业。
+提供数据标注、模型训练与评测服务，以及企业和政府 AI 应用。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2016；Remotasks（CV）与 Outlier（LLM）两个标注平台 |
-| **所有权** | 2025.6 Meta 以 $14.3B 取得 49% 无投票权股份，估值 $29B；创始人 Alexandr Wang 出任 Meta Superintelligence Labs 负责人 |
-| **营收信号** | 2024 年 $870M；2026 年指引约 $1B（同比下滑） |
-| **客户变化** | OpenAI、Google、xAI 在交易后数周内削减或终止合同 |
-| **政府业务** | $300M+ DoD 合同，相对不受商业实验室流失影响 |
-| **法律动作** | 2025.9 起诉 Mercor 窃取商业秘密（称前员工下载客户策略文件后入职） |
-| **官网** | <https://scale.com> |
+**Alexandr Wang 与 Lucy Guo** 于 2016 年共同创办 Scale，两人在 Quora 工作时相识。Wang 曾在 MIT 学习；Guo 曾就读 Carnegie Mellon，获得 Thiel Fellowship 后离校，早期从事软件工程与产品设计，并曾在 Snapchat 工作。她参与公司早期产品，2018 年离开日常经营。[创始经历采访](https://www.forbes.com/sites/kerryadolan/2025/04/17/this-ai-founder-lucy-guo-scale-ai-has-unseated-taylor-swift-as-the-worlds-youngest-self-made-woman-billionaire/) · [Guo 自述](https://www.eomag.io/article/passes-lucy-guo)
 
-## 发表的工作
+2025 年 Wang 转往 Meta，Jason Droege 担任临时 CEO。2026 年 8 月 10 日，Francis deSouza 接任 CEO；他此前任职于 Google Cloud、Illumina 和 Symantec。Wang 在此次任命公告中仍为董事长。[2026 年任命公告](https://scale.com/blog/scale-appoints-new-ceo) · [公司 CEO 信](https://scale.com/blog/jason-droege-scale-ceo-letter)
 
-### Humanity’s Last Exam (HLE)
+## 发展过程
 
-与 Center for AI Safety 合作。2500 道专家级多模态闭卷题，覆盖数学、人文、自然科学等上百个学科。投稿 7 万+，先过「模型答不对」的过滤（1.3 万通过），再由相关领域研究生学历以上的评审人工复核，最终留 2500 道公开题，另有 held-out 私有集防过拟合。设 50 万美元奖金池。发表于 Nature（649, 1139–1146, 2026）。
+- **2016—2020 年**：围绕机器学习标注建立业务，任务从图像延伸到自动驾驶及其他数据类型。
+- **2021—2024 年**：扩展语言模型数据、人工反馈、企业应用和安全评测；建立 SEAL 研究团队。
+- **2025 年 6 月**：Meta 宣布投资约 143 亿美元并取得 49% 股份，Wang 转往 Meta；Scale 继续作为独立公司运营。[交易报道](https://apnews.com/article/4b55aabf7ea018e38ffdccb66e37cf26)
+- **2026 年**：Scale Labs 汇集 agent、后训练、数据科学、安全与评测研究，并持续发布行业任务基准。
+- **2026 年 8 月**：Francis deSouza 接任 CEO，业务继续围绕模型数据与企业、政府 AI 应用展开。[任命公告](https://scale.com/blog/scale-appoints-new-ceo)
 
-- [arXiv:2501.14249](https://arxiv.org/abs/2501.14249)
-- [Nature](https://nature.com/articles/s41586-025-09962-4)
-- [官网](https://lastexam.ai)
+## 目前的主营业务
 
-### SEAL Leaderboard
+Scale 的业务由数据服务和应用系统两部分组成。[Data Engine](/companies/scale-ai/data-engine) 覆盖采集、筛选与标注，其中[生成式数据服务](/companies/scale-ai/generative-ai-data-engine) 制作专家提示、回答和偏好反馈；[Scale Evaluation](/companies/scale-ai/scale-evaluation) 提供模型测试与错误分析。
 
-Scale 的对外模型评测榜单（含 HLE 榜单）。
+[GenAI Portfolio](/companies/scale-ai/genai-portfolio) 面向企业，连接资料、agent 执行、监测和模型改进；[Donovan](/companies/scale-ai/donovan) 面向公共部门，提供专用知识库、模型比较和 agent 部署。[现行业务说明](https://scale.com/blog/scale-appoints-new-ceo)
 
-- [Leaderboard](https://scale.com/leaderboard)
+研究由较早的视觉数据、属性识别与标注质量，逐步扩展到语言模型后训练、奖励模型、安全和长期 agent 任务。下方时间线补充了官方目录中的早期视觉研究，以及 2025—2026 年的专业推理、评分标准、模型安全与 agent 工作。论文首发日期与官网目录日期不一致时，在工作页分别说明。[研究目录](https://labs.scale.com/papers)
 
-::: tip 备注
-一个不能回避的问题：FutureHouse 抽查发现 HLE 化学生物部分约 29% 的题目可能有错，Scale 自己的估计是 18%。已有 "HLE Bio/Chem Gold" 修正子集。
-:::
+## 论文、基准与产品时间线
 
-## 讨论与总结
+<CompanyWorks company="scale-ai" />
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+## 参考资料
 
-## 可以先想的问题
+- [Lucy Guo：创始经历访谈](https://www.eomag.io/article/passes-lucy-guo)
+- [Scale：Jason Droege 公开信，2025-06-18](https://scale.com/blog/jason-droege-scale-ceo-letter)
+- [AP：Meta 投资，2025-06-13](https://apnews.com/article/4b55aabf7ea018e38ffdccb66e37cf26)
+- [Scale Labs：Papers](https://labs.scale.com/papers)
+- [Scale：Francis deSouza 任命公告，2026-07-30](https://scale.com/blog/scale-appoints-new-ceo)
 
-- HLE（闭卷学术题）vs APEX（经济价值任务）vs Vending-Bench（长程一致性）——三种评测哲学，各自在测什么、漏掉什么？
-- 题目错误率 18–29% 对「专家级基准」这个定位意味着什么？ crowdsource 出题的质量控制天花板在哪？
-- 中性（neutrality）作为一种产品属性：它是怎样被定价的？
+资料核对截至 2026 年 9 月 10 日。公司参与方式及开放范围见各项工作页面。

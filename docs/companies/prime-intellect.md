@@ -1,64 +1,47 @@
 ---
-title: Prime Intellect
-category: RL 环境
-founded: '2023'
-site: https://primeintellect.ai
+title: "Prime Intellect"
+category: "RL 环境"
+founded: "2023"
+site: "https://www.primeintellect.ai"
 order: 1
-summary: '开源「自主训练栈」：算力 + RL 环境 + 评测 + 部署，主张企业自己训模型而不依赖前沿实验室。'
+summary: "提供开放模型训练基础设施，连接 GPU 算力、合成数据、强化学习环境和托管训练。"
+reviewed: "2026-09-09"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Prime Intellect
 
-> 开源「自主训练栈」：算力 + RL 环境 + 评测 + 部署，主张企业自己训模型而不依赖前沿实验室。
+提供开放模型训练基础设施，连接 GPU 算力、合成数据、强化学习环境和托管训练。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2023，SF，CEO Vincent Weisser |
-| **融资** | 2026.7 Series A $130M @ $1B（Radical Ventures 领投，NVIDIA Ventures / Intel Capital / Dell Technologies Capital / Iconiq 参投） |
-| **营收信号** | $100M+ annualized，6000+ 客户，团队约 32 人 |
-| **产品** | Compute Exchange（GPU 市场）+ PRIME-RL 框架 + Verifiers 库 + Environments Hub（2500+ 社区环境）+ Sandboxes + 托管评测 + 推理 |
-| **官网** | <https://primeintellect.ai> |
+**Vincent Weisser 与 Johannes Hagemann** 共同创办 Prime Intellect，分别承担公司与技术方向的领导工作。Weisser 此前参与创办 dex.blue；Hagemann 参与分布式训练框架与 INTELLECT 系列技术报告。[团队履历](https://wellfound.com/company/prime-intellect/people) · [技术报告](https://arxiv.org/abs/2512.16144)
 
-## 发表的工作
+Protocol Labs 的投资组合目录将公司成立时间列为 2023 年；公开产品主要从 2024 年开始发布。现有可核实资料不足以完整列出两人的教育经历，因此不补写未确认学位。[投资方目录](https://directory.plnetwork.io/teams/clwarvfoe0000vb02i396ob9h)
 
-### INTELLECT-1 Technical Report
+## 发展过程
 
-100 亿参数，1 万亿 token，用最多 14 个并发节点跨 3 大洲、30 个独立算力提供方动态加入退出训练，维持 83–96% 算力利用率、36.2–41.4% MFU。框架 PRIME 的关键创新：ElasticDeviceMesh（跨互联网的容错通信 + 节点内通信）、live checkpoint recovery、混合 DiLoCo-FSDP2，配合自研 int8 all-reduce，通信带宽比传统数据并行降低 400 倍。
+- **2023—2024 年**：建立公司并推出 GPU Compute Exchange、OpenDiLoCo，随后进行跨地域语言模型训练。
+- **2024 年 11 月**：发布 INTELLECT-1。
+- **2025 年**：发布 SYNTHETIC 数据集、INTELLECT-2、PCCL 和 Environments Hub；11 月发布 INTELLECT-3。
+- **2026 年**：扩展 Lab 托管训练、托管评测、agent 和训练系统；7 月公布 1.3 亿美元 A 轮融资。[公告时间线](https://www.primeintellect.ai/blog)
 
-- [arXiv:2412.01152](https://arxiv.org/abs/2412.01152)
+## 目前的主营业务
 
-### INTELLECT-2
+算力业务提供 GPU 访问与集群；训练业务围绕 Lab、prime-rl、verifiers 和环境社区展开；另提供模型推理与评测服务。开源代码、开放模型和收费托管服务共同组成产品体系。
 
-320 亿参数推理模型，从 QwQ-32B 出发，在无许可的分布式算力 swarm 上做异步 RL。Apache 2.0，权重、代码、训练日志全开源。公司自己强调主要贡献是方法论（证明 RL 可以在分布式基础设施上做），而不是能力上的跃升。
+INTELLECT-1 的分布式预训练、INTELLECT-2 的分布式 RL，以及 INTELLECT-3 在单一集群的训练设置不同，工作页分别说明，不统一称作同一种“去中心化训练”。
 
-- [Blog](https://www.primeintellect.ai/blog/intellect-2)
+## 论文、基准与产品时间线
 
-### INTELLECT-3
+<CompanyWorks company="prime-intellect" />
 
-1060 亿参数 MoE（每次前向激活约 120 亿），从 GLM-4.5-Air-Base 出发 SFT + 大规模 RL。这次是在 512 张 H200 的单一集群上做的，分布式贡献主要来自众包的 RL 环境。报告 MATH-500 98.1%、AIME 2024 90.8%、GPQA Diamond 74.4%、LiveCodeBench v6 69.3%。
+## 参考资料
 
-- [Blog](https://www.primeintellect.ai/blog/intellect-3)
+- [Prime Intellect：Blog](https://www.primeintellect.ai/blog)
+- [Protocol Labs：Prime Intellect](https://directory.plnetwork.io/teams/clwarvfoe0000vb02i396ob9h)
+- [Wellfound：创始团队](https://wellfound.com/company/prime-intellect/people)
+- [Prime Intellect：INTELLECT-3 Technical Report，2025-12-18](https://arxiv.org/abs/2512.16144)
 
-### Verifiers / Environments Hub
-
-把任意任务变成 RL 环境的开源库与社区 Hub（2500+ 环境），一条 CLI 循环：init → develop → eval → push。这是它和老牌标注公司正面相接的地方。
-
-- [primeintellect.ai](https://www.primeintellect.ai)
-
-::: tip 备注
-Ramp 用它训了一个 350 亿参数模型，在表格搜索上超过 Claude Opus，速度快 27%、成本更低——这是「不为等更好的前沿模型，自己训一个特定工作流的模型」这个论点的主打案例。
-:::
-
-## 讨论与总结
-
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
-
-## 可以先想的问题
-
-- 400 倍通信压缩（DiLoCo + int8 all-reduce）具体是怎么做到的？对 RL 后训练的算力组织意味着什么？
-- 「企业自己训模型」这个叙事，在什么条件下真的成立？Ramp 的案例可复制到什么程度？
-- 把评测（Environments Hub）和训练绑在同一个栈里——这是评测作为产品的终点形态吗？
+资料核对截至 2026 年 9 月 9 日。公司参与方式及开放范围见各项工作页面。

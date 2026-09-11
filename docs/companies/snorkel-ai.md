@@ -1,53 +1,53 @@
 ---
-title: Snorkel AI
-category: 平台与工具
-founded: '2019'
-site: https://snorkel.ai
+title: "Snorkel AI"
+category: "平台与工具"
+founded: "2019"
+site: "https://snorkel.ai"
 order: 3
-summary: '斯坦福系，程序化标注（弱监督）的学术源头，正在从「用代码生成标签」转向专家数据服务。'
+summary: "源自 Stanford 弱监督研究，提供专家数据开发、模型评测和 agent 环境。"
+reviewed: "2026-09-10"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Snorkel AI
 
-> 斯坦福系，程序化标注（弱监督）的学术源头，正在从「用代码生成标签」转向专家数据服务。
+源自 Stanford 弱监督研究，提供专家数据开发、模型评测和 agent 环境。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2019，源自 Stanford 的 Snorkel / data programming 研究 |
-| **最新估值** | $1.3B（2025.5 Series D $100M） |
-| **定位** | 用标注函数（labeling function）弱监督批量生成标签，减少人工；现扩展到 expert data-as-a-service |
-| **研究产出** | 官网 research 区持续更新，2022 年一次性上线 18 篇（弱监督扩展到排序/图/流形、基础模型与弱监督融合、PWS 综述、AutoWS-Bench-101 等） |
-| **官网** | <https://snorkel.ai> |
+五位联合创始人为 **Alex Ratner、Chris Ré、Henry Ehrenberg、Braden Hancock 和 Paroma Varma**，共同背景是 Stanford 的 Snorkel 研究与开源项目。[创始团队资料](https://research.contrary.com/report/snorkel-ai)
 
-## 发表的工作
+Ratner 在 Stanford 师从 Ré 完成计算机科学博士，发起并带领 Snorkel 开源项目，后任教于 University of Washington。Ré 的研究涉及数据库、机器学习系统与弱监督，曾参与多个研究成果产业化项目。[Ratner 简介](https://snorkel.ai/author/alex-ratner/) · [Ré 研究回顾](https://snorkel.ai/blog/snorkel-journey-to-data-centric-ai-chris-re/)
 
-### Snorkel: Rapid Training Data Creation with Weak Supervision
+Ehrenberg 参与早期系统及数据增强研究；Hancock 与 Varma 参与程序化标注和弱监督研究。Hancock 的个人履历区分了 2019—2024 年在公司的经营职务及后来的顾问身份。[个人履历](https://www.bradenhancock.com/)
 
-VLDB 2018（PVLDB 11(3):269–282）。核心：用户不手工标注，而是写表达任意启发式的标注函数（准确度与相关性可未知），Snorkel 在无 ground truth 的情况下对这些输出去噪——这是 data programming 范式的第一个端到端实现。用户研究中，领域专家建模速度快 2.8 倍、预测性能平均提升 45.5%。
+## 发展过程
 
-- [arXiv:1711.10160](https://arxiv.org/abs/1711.10160)
-- [DOI](https://doi.org/10.14778/3157794.3157797)
+- **2015—2018 年，成立前**：Stanford 研究团队发展 data programming 和 Snorkel 系统。Data Programming、MeTaL 和与 Google 合作的 DryBell 分别处理规则标注、多任务学习和企业知识接入。
+- **2019 年**：Snorkel AI 从研究项目发展为公司。
+- **2020 年起**：以 Snorkel Flow 将程序化数据标注、模型训练和数据迭代整合为产品。
+- **2025—2026 年**：增加 Snorkel Evaluate、专家数据服务，并参与专业工作、桌面操作和终端任务基准。[公司介绍](https://snorkel.ai/company/) · [研究目录](https://snorkel.ai/research/)
 
-### 弱监督方向的后续工作（部分）
+## 目前的主营业务
 
-A Survey on Programmatic Weak Supervision（PWS 综述）；Lifting Weak Supervision to Structured Prediction（把弱监督从分类扩展到排序、图、流形，并给出同类泛化保证）；AutoWS-Bench-101（用 100 个标签的自动化弱监督基准）；Generative Modeling Helps Weak Supervision（弱监督与生成模型互相增强）；Nemo（交互式数据编程）。
+公司提供专家参与的数据开发、训练环境、评测体系和企业专用 AI 系统。[Snorkel Flow](/companies/snorkel-ai/flow) 将程序化标注与数据迭代整合；评测与专家数据服务进一步覆盖 rubric 编写、领域任务设计及 RL 训练反馈。
 
-- [Snorkel Research](https://snorkel.ai/research/)
+近期合作包括为 Harvey 的[法律研究基准](/companies/snorkel-ai/biglaw-research) 制作任务，与 Berkeley 团队开发[财务工具环境](/companies/snorkel-ai/finance-agentica)，以及共同发表[持续学习](/companies/snorkel-ai/continual-learning-bench)、[长期桌面操作](/companies/snorkel-ai/osworld-2)和[软件工程](/companies/snorkel-ai/senior-swe-bench)基准。[研究目录](https://snorkel.ai/research/)
 
-::: tip 备注
-data programming 的源头文献值得精读：它提出的「用带噪声的多个弱信号去噪出标签」这个思路，和后训练里用多个 judge 打分取共识，在结构上非常相似。
-:::
+公司还通过 Open Benchmarks Grants 支持外部项目。各工作页分别注明共同研究、数据制作、任务贡献与资助关系。
 
-## 讨论与总结
+## 论文、基准与产品时间线
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+<CompanyWorks company="snorkel-ai" />
 
-## 可以先想的问题
+## 参考资料
 
-- 弱监督的去噪模型（在无 ground truth 下估计标注函数的准确度与相关性）能否直接迁移到 LLM-as-judge 的校准上？
-- AutoWS-Bench-101 这类「自动弱监督基准」的结论，对今天的合成数据实践还有指导力吗？
-- 一家以程序化标注（省人力）起家的公司，为什么转向专家人力服务？
+- [Snorkel AI：Company](https://snorkel.ai/company/)
+- [Snorkel AI：Research](https://snorkel.ai/research/)
+- [Snorkel AI：Alex Ratner](https://snorkel.ai/author/alex-ratner/)
+- [Snorkel AI：Chris Ré，2021-11-03](https://snorkel.ai/blog/snorkel-journey-to-data-centric-ai-chris-re/)
+- [Braden Hancock：个人履历](https://www.bradenhancock.com/)
+- [Contrary：创始团队](https://research.contrary.com/report/snorkel-ai)
+
+资料核对截至 2026 年 9 月 10 日。公司参与方式及开放范围见各项工作页面。

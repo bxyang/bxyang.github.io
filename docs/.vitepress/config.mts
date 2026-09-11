@@ -30,6 +30,7 @@ export default defineConfig({
     sidebar: {
       '/companies': [
         { text: '概览', link: '/companies' },
+        { text: '论文、基准与产品', link: '/research' },
         {
           text: '专家数据',
           collapsed: false,

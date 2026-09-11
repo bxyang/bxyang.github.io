@@ -1,42 +1,46 @@
 ---
-title: Turing
-category: 专家数据
-founded: '2018'
-site: https://www.turing.com
+title: "Turing"
+category: "专家数据"
+founded: "2018"
+site: "https://www.turing.com"
 order: 4
-summary: '从工程师外包转 LLM 后训练，是这批公司里少数明确盈利的一家，正在往 RL 环境和多模态 agent 训练延伸。'
+summary: "由远程工程师匹配业务扩展到模型后训练、软件工程评测和企业工作环境。"
+reviewed: "2026-09-09"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Turing
 
-> 从工程师外包转 LLM 后训练，是这批公司里少数明确盈利的一家，正在往 RL 环境和多模态 agent 训练延伸。
+由远程工程师匹配业务扩展到模型后训练、软件工程评测和企业工作环境。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2018，最初做工程师匹配；2022 年 OpenAI 找它训练 Codex 后转向 AI 训练服务 |
-| **营收信号** | ARR 约 $300M，据报道已盈利 |
-| **最新估值** | $2.2B（2025.3 Series E $111M，马来西亚主权基金 Khazanah Nasional 领投） |
-| **供给** | 全球 300 万+ 开发者池 |
-| **延伸** | 大规模 RL 环境、编码之外的多模态 agent 训练 |
-| **官网** | <https://www.turing.com> |
+**Jonathan Siddharth 与 Vijay Krishnan** 共同创办 Turing。两人在 Stanford 时期合作创建内容发现产品 Rover，曾经营分布式工程团队；Rover 于 2017 年被 Revcontent 收购。他们随后把技术人才筛选和远程团队管理做成 Turing 的业务。[公司回顾](https://www.turing.com/blog/why-a-deep-jobs-platform-is-a-better-choice-for-companies-and-job-seekers)
 
-## 发表的工作
+Siddharth 的背景包括计算机科学和机器学习创业；Krishnan 同样有机器学习及推荐产品经验。创始团队的主要早期经历是软件产品与技术招聘，不应将公司后来的全部 benchmark 都归为两人的个人研究。
 
-_暂无公开发表的论文或基准。_
+## 发展过程
 
-::: tip 备注
-没有系统性的公开论文发表。
-:::
+- **2018 年**：创办 Turing，提供远程开发者筛选、匹配与管理。
+- **随后数年**：开发者网络扩展，业务加入面向模型公司的代码与专业数据服务。
+- **2025 年**：公开研究目录收录 SWE-Lancer、UI-Vision、Verilog 评测、SWE-bench++ 和 Code Review Benchmark 等成果。
+- **2026 年**：发布 CompanyBench、CEO Bench，将评测扩大到企业资料检索和财务运营任务。[研究主页](https://research.turing.com/)
 
-## 讨论与总结
+## 目前的主营业务
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+业务包括为模型开发者制作训练数据、构建 RL 环境和设计评测，以及为企业开发 AI 系统。软件工程仍是公开成果较集中的领域，任务涉及修改代码、审查代码、使用桌面软件和完成跨系统工作。
 
-## 可以先想的问题
+研究目录还列出外部合作或贡献项目。下方会注明 Turing 自主发布、共同研究和数据贡献的区别。[官方研究](https://research.turing.com/)
 
-- 在这批公司里选择盈利而非极致增长，代价是什么？
-- 从「给人」到「给 RL 环境」，Turing 的工程师网络还有优势吗？
+## 论文、基准与产品时间线
+
+<CompanyWorks company="turing" />
+
+## 参考资料
+
+- [Turing：Deep Jobs 平台发展回顾](https://www.turing.com/blog/why-a-deep-jobs-platform-is-a-better-choice-for-companies-and-job-seekers)
+- [Turing Research](https://research.turing.com/)
+- [Turing：CEO Bench，2026-09-07](https://www.turing.com/blog/ceo-bench-frontier-agents-real-company-work)
+
+资料核对截至 2026 年 9 月 9 日。公司参与方式及开放范围见各项工作页面。

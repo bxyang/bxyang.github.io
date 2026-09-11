@@ -1,40 +1,47 @@
 ---
-title: Labelbox
-category: 平台与工具
-founded: '2018'
-site: https://labelbox.com
+title: "Labelbox"
+category: "平台与工具"
+founded: "2018"
+site: "https://labelbox.com"
 order: 2
-summary: '标注平台 + Alignerr 专家服务，卖软件与工作流，客户自己跑项目。'
+summary: "由协作标注软件扩展到专家数据、RL 环境、机器人数据和企业模型训练。"
+reviewed: "2026-09-09"
 ---
 
-[← 返回公司研究](/companies)
+[← 公司研究](/companies)
 
 # Labelbox
 
-> 标注平台 + Alignerr 专家服务，卖软件与工作流，客户自己跑项目。
+由协作标注软件扩展到专家数据、RL 环境、机器人数据和企业模型训练。
 
-## 基本盘
+## 创始人背景
 
-| | |
-|---|---|
-| **成立** | 2018 |
-| **估值** | 约 $1B（SoftBank 2022 年那轮，已陈旧），营收未披露 |
-| **定位** | Type II 平台：客户在 SaaS 上建项目、编排自有或外包标注员，用模型预标注 + QA 看板迭代；多模态（图像、文本、视频） |
-| **延伸** | Alignerr 专家服务；近年加强 LLM 评测 |
-| **官网** | <https://labelbox.com> |
+**Manu Sharma、Brian Rieger 和 Dan Rasmuson** 共同创办 Labelbox。Sharma 曾在 DroneDeploy 和 Planet 从事产品工作；Rieger 有航空工程、Boeing 和数据分析经历；Rasmuson 的背景是软件工程。Sharma 与 Rieger 在大学阶段已有合作，后来从实际图像数据工作中确定标注平台方向。[创始人访谈](https://review.firstround.com/labelboxs-path-to-pmf-founders-need-to-be-contrarian-and-right-heres-how/)
 
-## 发表的工作
+早期团队先访谈使用数据的企业，再推出协作标注产品。该经历与后来的多模态数据管理、质量控制和专家协作业务直接相关。
 
-_暂无公开发表的论文或基准。_
+## 发展过程
 
-::: tip 备注
-没有标志性的公开基准。
-:::
+- **2018 年**：推出协作数据标注平台。
+- **随后数年**：扩展数据管理、模型辅助标注和标注质量分析。
+- **2024 年**：通过 Alignerr 提供专业人才；11 月推出 Alignerr Connect，允许客户直接招募专家加入现有流程。[公告](https://labelbox.com/blog/announcing-labelbox-alignerr-connect-with-proven-ai-experts/)
+- **2025—2026 年**：公开研究加入隐含约束、语音交互和安全评测；产品扩展到 Horizon、Terra 与 Recursion。[官网](https://labelbox.com/)
 
-## 讨论与总结
+## 目前的主营业务
 
-_还没写。我们一篇一篇聊，聊完把结论填到这里。_
+**Horizon** 提供 RL 环境和后训练信号；**Terra** 提供机器人所需的视频、轨迹和多模态数据；**Alignerr** 组织领域专家；**Recursion** 面向企业专用 agent 的数据接入、场景生成、训练与部署。[产品目录](https://labelbox.com/)
 
-## 可以先想的问题
+原有标注平台的 benchmark 功能用于检查标注员与标准标签的一致程度，和对外发布的模型 benchmark 含义不同。
 
-- 平台模式（客户自己跑）vs 实验室模式（交付结果），在这个市场里哪个更抗周期？
+## 论文、基准与产品时间线
+
+<CompanyWorks company="labelbox" />
+
+## 参考资料
+
+- [First Round：Labelbox 创始人访谈，2023](https://review.firstround.com/labelboxs-path-to-pmf-founders-need-to-be-contrarian-and-right-heres-how/)
+- [Labelbox：产品目录](https://labelbox.com/)
+- [Labelbox：Alignerr Connect，2024-11-13](https://labelbox.com/blog/announcing-labelbox-alignerr-connect-with-proven-ai-experts/)
+- [Labelbox：Benchmark 文档](https://docs.labelbox.com/docs/benchmark)
+
+资料核对截至 2026 年 9 月 9 日。公司参与方式及开放范围见各项工作页面。
