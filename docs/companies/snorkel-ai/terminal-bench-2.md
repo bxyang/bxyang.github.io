@@ -1,40 +1,40 @@
 ---
-title: "Terminal-Bench 2.0：终端任务的难度与质量改进"
+title: "Terminal-Bench 2.0：Snorkel 的任务与评测分析贡献"
 company: "snorkel-ai"
 date: "2025-11-07"
 dateLabel: "2025-11-07"
 kind: "合作基准"
-description: "更新终端任务，并加强任务可解性、复现性和失败分析。"
-reviewed: "2026-09-10"
+description: "介绍 Snorkel 在 Terminal-Bench 2.0 中的任务贡献、难度评估与失败分析；完整论文解读见同一研究的精读页面。"
+reviewed: "2026-09-12"
 ---
 
-[← Snorkel AI](/companies/snorkel-ai) · [全部工作](/research)
+[← Snorkel AI](/companies/snorkel-ai) · [全部工作](/research) · [完整论文精读](/companies/bespoke-labs/terminal-bench)
 
-# Terminal-Bench 2.0：终端任务的难度与质量改进
+# Terminal-Bench 2.0：Snorkel 的任务与评测分析贡献
 
-更新终端任务，并加强任务可解性、复现性和失败分析。
+Terminal-Bench 2.0 是 Stanford 与 Laude Institute 组织、多个机构共同贡献的终端任务基准。它提供 89 个容器化任务，让 agent 操作文件、程序和服务，再用测试检查最终结果。Snorkel 参与了任务制作和评测分析。
 
-| 项目 | 信息 |
-| --- | --- |
-| 时间 | 2025-11-07 |
-| 类型 | 合作基准 |
-| 公司参与 | Stanford 与 Laude 主导；Snorkel 贡献任务、难度评估及失败分类 |
+本页介绍公司参与情况。对应论文是 2026 年 1 月 17 日公开的 *Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces*；它与 Bespoke Labs 目录下的 Terminal-Bench 页面是**同一篇合作论文**。数据构建、评分公式、主要结果、代码与版本差异统一整理在 [完整精读](/companies/bespoke-labs/terminal-bench)，不重复计算为另一篇精读。
 
-## 工作内容
+## 参与依据
 
-第二版清理受外部依赖影响或规格不清楚的任务，提高验证标准，并增加更复杂的工程工作。每项任务在可执行终端环境中运行，以实际产物或状态检查结果。 [资料](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
+Snorkel 于 2025 年 11 月 7 日发布贡献说明，列出三个方向：为任务提供一致的难度评估方式；建立失败分类并分析执行轨迹；向任务注册表和 2.0 数据集提交任务。该说明没有逐题列出全部公司贡献，也没有给出每项研究的独立人员分工，因此不据此推断 Snorkel 独立完成了整套基准。[公司贡献说明](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
 
-## 数据与评测
+论文首页中，**Jeong Yeon Shin 同时署名 Stanford 和 Snorkel AI**，为研究参与提供了作者层面的依据。研究包含多所大学、公司及独立贡献者，Mike A. Merrill 和 Alexander G. Shaw 是共同第一及通讯作者。[论文 v1 首页](https://arxiv.org/pdf/2601.11868v1)
 
-发布说明记录 89 个任务。Snorkel 的贡献包括一套一致的难度判断方法、失败类型分类和执行轨迹分析，以及向公开任务注册表提交任务。 [资料](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
+## 这些分析如何进入基准
 
-## 结果与公开范围
+难度分析把人类给出的任务难度与统一 Terminus 2 框架下的模型完成率比较。论文发现，人类标为 hard 的任务中，93.3% 对所测模型也属于 hard；人类标为 medium 的任务仍有 54.5% 对模型较难。这个经验难度依赖所测模型和预算，并不是永远固定的任务属性。[论文 §4.3、图 7]
 
-基准作为社区开源项目发布，配套介绍 Harbor 容器化运行框架。本页日期采用 Snorkel 的贡献说明发布日期，保留项目由 Stanford 与 Laude 主导的归属。 [资料](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
+失败分析则区分执行、连贯性和验证问题，例如重复无进展操作、忘记已经修改的环境状态、未完成必要检查就宣布成功。分析使用执行轨迹和专门的标签定义；同一轨迹可以对应多个问题。这类诊断帮助解释失败行为，与通过测试得到的任务完成率是不同的测量。[论文 §4.4、附录 C]
 
-## 参考资料
+论文同时强调参考解、人工审查和自动检查，也承认联网依赖、资源差异、测试覆盖和公开数据污染仍可能影响结果。因此，本页不把公司发布说明中的质量表述当作“所有环境已永久无误”的保证。
 
-- [Terminal-Bench 2.0：终端任务的难度与质量改进：论文或发布说明](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
-- [Snorkel 研究目录](https://snorkel.ai/research/)
+## 版本与阅读入口
 
-资料核对截至 2026 年 9 月 10 日。实验结果对应所引资料的模型版本和评测设置。
+本页日期保留 **2.0 发布及 Snorkel 贡献说明的 2025 年 11 月 7 日**。论文精读使用 **arXiv:2601.11868v1，2026 年 1 月 17 日**，两者时间不同。这里不混入后续版本的任务或榜单。
+
+- [完整精读：Terminal-Bench 2.0 的任务、测试、结果和复现](/companies/bespoke-labs/terminal-bench)
+- [原始论文与完整作者名单](https://arxiv.org/abs/2601.11868v1)
+- [Snorkel 的 2.0 贡献说明](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
+- [Terminal-Bench 2.0 与 Harbor 发布说明](https://www.tbench.ai/news/announcement-2-0)
