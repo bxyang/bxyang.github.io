@@ -230,7 +230,7 @@ $\Gamma_{\mathrm{docs}}$ 可以生成棋子位置说明或棋谱；$\Gamma_{\mat
 
 README 还明确链接另一篇论文：[HalluWorld: A Controlled Benchmark for Hallucination via Reference World Models](https://arxiv.org/abs/2605.19341)，2026 年 5 月 19 日公开，作者名单为七人，与本文十人的署名不同。它将参考世界思路用于 gridworld、象棋和终端环境。这个配套工作应单独阅读其任务、模型与实验设置，不能把本页已完成定义精读理解成其全部实验也已完成核查。
 
-截至本页核对，已将 HalluWorld 独立原文下载到本地论文库，作为后续精读项登记。本页只解释它与定义论文的关系，不转录尚未精读的成绩。
+HalluWorld 的全文、附录和公开材料已单独核对，详见 [HalluWorld 精读](/companies/patronus-ai/halluworld)。该页介绍三类环境、评分口径、模型实验与消融；本页保留定义与概念边界。
 
 ## 原始资料
 
