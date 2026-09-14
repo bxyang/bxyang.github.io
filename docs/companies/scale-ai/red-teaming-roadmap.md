@@ -22,7 +22,7 @@ paperVersion: "arXiv:2506.05376v2，2025-06-09，18 页"
 
 Zifan 在 2023 年获得卡内基梅隆大学博士学位，导师是 Anupam Datta 和 Matt Fredrikson，研究方向包括安全、稳健性与对齐。他在 Scale 的工作也涉及红队和智能体监控；本文记录的是其在 Scale 期间的研究。[Zifan 个人主页](https://zifanw.github.io/)、[论文首页](https://arxiv.org/pdf/2506.05376v2)
 
-Christina 参与 Scale 的 AI 安全、评测与政策研究。她后续发布的本人公告介绍了公司安全与政策研究实验室的建设；目前未找到足够可靠、完整的教育及早期履历，因此不额外补充学历或此前职位。这里也不把后续实验室名称倒推为本文发表时的署名。[Christina 本人公告](https://www.linkedin.com/posts/christina-knight-a16343191_machine-learning-research-lead-security-activity-7387227171620065281-6bVK)
+Christina 参与 Scale 的 AI 安全、评测与政策研究。她曾在美国商务部从事 AI 政策工作，并担任美国 AI 安全研究所的高级政策顾问。她拥有斯坦福大学哲学硕士、符号系统专业 AI 方向理学学士学位，并以苏世民学者身份获得全球事务硕士学位。这些研究与政策经历见她的 [Lawfare 作者简介](https://www.lawfaremedia.org/contributors/cknight)。
 
 本文属于 Scale 团队对红队研究方向的立场讨论，没有发布新的攻击基准或模型。
 
