@@ -20,7 +20,7 @@ paperVersion: "arXiv:2409.19759v3 · 2024-10-30 · 全文及附录 A–G"
 
 Yung-Chieh 也使用 Jerry Chan 这个名字。他于 2022 年获得加州大学圣迭戈分校数据科学学士学位，2023 年进入斯坦福大学攻读计算机科学硕士。此前研究包括医学图像分割和基于模型的强化学习跨任务迁移，也曾在 AWS 实习。[个人主页](https://jerrys-personal-website.webflow.io/)
 
-George 的公开职业主页列出 Scale AI 工作经历，以及 2021—2023 年在加州大学洛杉矶分校、侧重人工智能的学习经历；他也曾在 Convoy 参与数据发现与机器学习相关工作。公开可见信息没有充分说明具体学位，因此不进一步推断。他在 Scale 的后续研究也涉及任务歧义与智能体澄清。[作者职业主页](https://www.linkedin.com/in/georgenpu)
+George 的[个人网站](https://georgepu1.github.io/)说明，他取得 UCLA 计算机科学硕士学位，在 Kai-Wei Chang 指导下研究人工智能安全和表征学习；本科期间在 UC San Diego 的 Jingbo Shang 团队参与研究。他在 Scale 从事企业智能体后训练及人工、合成数据流程研究。本人研究列表同时收录了这篇合成数据论文与后来的 LHAW 工作。
 
 ## 1. 摘要翻译
 
