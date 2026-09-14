@@ -20,7 +20,7 @@ paperVersion: "arXiv:2602.10525v2，2026-03-20"
 
 George Pu 与 Michael S. Lee 是署名第一、第二的作者，论文明确标注两人贡献相同，均属于 Scale AI。
 
-Pu 参与 Scale 的企业代理和模型训练研究。他是公司 2025 年[企业专用强化学习代理研究介绍](https://scale.com/blog/enterprise-rl-agents)的作者之一，关注如何让模型适应企业特定的工作流程与私有数据。他的[个人履历](https://www.linkedin.com/in/georgenpu)列出 2021—2023 年在 UCLA 学习、侧重人工智能的经历；公开页面没有提供足够信息确认具体学位，因此这里不作补充。
+Pu 参与 Scale 的企业代理和模型训练研究。他是公司 2025 年[企业专用强化学习代理研究介绍](https://scale.com/blog/enterprise-rl-agents)的作者之一，关注如何让模型适应企业特定的工作流程与私有数据。他的[个人网站](https://georgepu1.github.io/)说明，他取得 UCLA 计算机科学硕士学位，在 Kai-Wei Chang 指导下研究人工智能安全和表征学习；本科期间在 UC San Diego 的 Jingbo Shang 团队参与研究。
 
 Lee 的背景是可解释人工智能与人机交互。[卡内基梅隆大学机器人研究所](https://www.ri.cmu.edu/alumni/michael-lee/)记录，他于 2024 年完成博士学位，导师为 Reid Simmons 和 Henny Admoni，博士论文研究如何通过示范帮助人类理解代理的决策。他的[个人履历](https://www.linkedin.com/in/symikelee)将这一经历与 Scale 的研究任职相连接。
 
