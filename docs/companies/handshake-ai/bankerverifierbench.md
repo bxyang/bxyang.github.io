@@ -8,13 +8,13 @@ description: "Gandalf 论文的配套数据集：21 项投行任务、3,204 条�
 reviewed: "2026-09-13"
 ---
 
-[← Handshake AI](/companies/handshake-ai) · [Gandalf 论文完整精读](/companies/handshake-ai/gandalf) · [全部工作](/research)
+[← Handshake AI](/companies/handshake-ai) · [Gandalf 论文介绍](/companies/handshake-ai/gandalf) · [全部工作](/research)
 
 # BankerVerifierBench：评估工作产物验证器
 
 BankerVerifierBench（BVB）评估自动评分器本身。输入是一条已经完成的 agent 轨迹、最终工作环境和评分标准；验证器检查交付文件或工具状态，判断每条标准是否满足，再与专家标签比较。它不是用来重新执行投行任务、直接给任务 agent 排名的另一张榜单。
 
-**本页是同论文配套介绍。** BVB 与 Gandalf 共同发表于 *Verifying Agents in Rubric-Graded Environments*；[Gandalf 主文](/companies/handshake-ai/gandalf) 已包含方法、公式、全部主要实验、消融、代码及复现边界。本页不另计一篇论文精读。
+**本页是同论文配套介绍。** BVB 与 Gandalf 共同发表于 *Verifying Agents in Rubric-Graded Environments*；[Gandalf 主文](/companies/handshake-ai/gandalf) 介绍作者背景、研究脉络、核心方案与结论。本页不另计一篇独立论文。
 
 ## 来源与版本
 

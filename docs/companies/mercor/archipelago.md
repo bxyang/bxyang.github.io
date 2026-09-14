@@ -8,11 +8,11 @@ description: "拆解专业任务从环境快照、MCP 工具调用到产物评�
 reviewed: "2026-09-12"
 ---
 
-[← Mercor](/companies/mercor) · [全部工作](/research) · [APEX-Agents 论文精读](/companies/mercor/apex-agents)
+[← Mercor](/companies/mercor) · [全部工作](/research) · [APEX-Agents 论文介绍](/companies/mercor/apex-agents)
 
 # Archipelago：APEX-Agents 的环境、执行器与评分链
 
-Archipelago 是 Mercor 随 APEX-Agents 开放的执行与评测基础设施。它把项目文件装进环境，让 agent 通过统一的工具接口完成任务，再比较执行前后的状态、找到指定交付物并评分。论文中的 480 道任务是基准内容，Archipelago 则负责运行这些内容；二者对应同一篇 *APEX–Agents* 论文，并非两篇独立论文。本页介绍基础设施，实验结果、评分公式及数据制作见 [APEX-Agents 精读](/companies/mercor/apex-agents)。
+Archipelago 是 Mercor 随 APEX-Agents 开放的执行与评测基础设施。它把项目文件装进环境，让 agent 通过统一的工具接口完成任务，再比较执行前后的状态、找到指定交付物并评分。论文中的 480 道任务是基准内容，Archipelago 则负责运行这些内容；二者对应同一篇 *APEX–Agents* 论文，并非两篇独立论文。本页介绍基础设施，论文结果与数据制作见 [APEX-Agents 论文介绍](/companies/mercor/apex-agents)。
 
 | 项目 | 信息 |
 | --- | --- |
@@ -96,9 +96,9 @@ cd archipelago/examples/hugging_face_task
 
 ## 来源与核查范围
 
-本页是同一论文的基础设施配套说明，不另计一篇论文精读。已核对论文附录 A、D，固定代码的环境和组件说明、HF 示例、ReAct 主循环与摘要常量、示例评分配置及函数。尚未实际启动整套环境或验证榜单结果。
+本页是同一论文的基础设施配套说明，不另计一篇论文介绍。已核对论文附录 A、D，固定代码的环境和组件说明、HF 示例、ReAct 主循环与摘要常量、示例评分配置及函数。尚未实际启动整套环境或验证榜单结果。
 
 - [APEX-Agents 论文 v3](https://arxiv.org/pdf/2601.14242v3)
 - [Archipelago 固定提交](https://github.com/Mercor-Intelligence/archipelago/tree/bcacc2d1e99aa917bbe7f6f663c1551dc6ec7400)
 - [官方数据与访问条件](https://huggingface.co/datasets/mercor/apex-agents)
-- [APEX-Agents 深入精读](/companies/mercor/apex-agents)
+- [APEX-Agents 论文介绍](/companies/mercor/apex-agents)

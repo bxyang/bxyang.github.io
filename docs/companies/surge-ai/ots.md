@@ -30,11 +30,11 @@ reviewed: "2026-09-13"
 
 ## 相关论文
 
-目录中企业工具 agent 的训练展示，与 [Cross-Benchmark Generalization 精读](/companies/surge-ai/cross-benchmark)有关。该论文介绍办公工具环境上的训练及外部基准评测；[Office-to-SWE 精读](/companies/surge-ai/office-to-swe)进一步分析同一训练工作的行为变化。
+目录中企业工具 agent 的训练展示，与 [Cross-Benchmark Generalization 论文介绍](/companies/surge-ai/cross-benchmark)有关。该论文介绍办公工具环境上的训练及外部基准评测；[Office-to-SWE 论文介绍](/companies/surge-ai/office-to-swe)进一步分析同一训练工作的行为变化。
 
 产品目录与论文的数字需要按各自版本阅读：目录展示 Toolathlon 从 24.2 到 33.8，论文表 1 则报告从 22.2 到 31.8，二者都是增加 9.6 个百分点，但不是同一组绝对成绩。公开材料不足以确认差异的完整原因，不能将目录数字替换进论文表格。论文的任务、奖励、预算和评分说明见上面的独立页面。[产品目录](https://surgehq.ai/ots)、[论文](https://arxiv.org/abs/2608.00181)
 
-此页保留为产品说明，不将其引用的同一篇论文再次计为独立精读。
+此页保留为产品说明，不将其引用的同一篇论文再次计为独立论文。
 
 ## 参考资料
 

@@ -4,17 +4,17 @@ company: "snorkel-ai"
 date: "2025-11-07"
 dateLabel: "2025-11-07"
 kind: "合作基准"
-description: "介绍 Snorkel 在 Terminal-Bench 2.0 中的任务贡献、难度评估与失败分析；完整论文解读见同一研究的精读页面。"
+description: "介绍 Snorkel 在 Terminal-Bench 2.0 中的任务贡献、难度评估与失败分析；论文介绍见同一研究的主页面。"
 reviewed: "2026-09-12"
 ---
 
-[← Snorkel AI](/companies/snorkel-ai) · [全部工作](/research) · [完整论文精读](/companies/bespoke-labs/terminal-bench)
+[← Snorkel AI](/companies/snorkel-ai) · [全部工作](/research) · [论文介绍](/companies/bespoke-labs/terminal-bench)
 
 # Terminal-Bench 2.0：Snorkel 的任务与评测分析贡献
 
 Terminal-Bench 2.0 是 Stanford 与 Laude Institute 组织、多个机构共同贡献的终端任务基准。它提供 89 个容器化任务，让 agent 操作文件、程序和服务，再用测试检查最终结果。Snorkel 参与了任务制作和评测分析。
 
-本页介绍公司参与情况。对应论文是 2026 年 1 月 17 日公开的 *Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces*；它与 Bespoke Labs 目录下的 Terminal-Bench 页面是**同一篇合作论文**。数据构建、评分公式、主要结果、代码与版本差异统一整理在 [完整精读](/companies/bespoke-labs/terminal-bench)，不重复计算为另一篇精读。
+本页介绍公司参与情况。对应论文是 2026 年 1 月 17 日公开的 *Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces*；它与 Bespoke Labs 目录下的 Terminal-Bench 页面是**同一篇合作论文**。作者背景、研究背景、核心方案与结论统一整理在 [论文介绍](/companies/bespoke-labs/terminal-bench)，不重复计为另一篇独立论文。
 
 ## 参与依据
 
@@ -32,9 +32,9 @@ Snorkel 于 2025 年 11 月 7 日发布贡献说明，列出三个方向：为�
 
 ## 版本与阅读入口
 
-本页日期保留 **2.0 发布及 Snorkel 贡献说明的 2025 年 11 月 7 日**。论文精读使用 **arXiv:2601.11868v1，2026 年 1 月 17 日**，两者时间不同。这里不混入后续版本的任务或榜单。
+本页日期保留 **2.0 发布及 Snorkel 贡献说明的 2025 年 11 月 7 日**。论文介绍使用 **arXiv:2601.11868v1，2026 年 1 月 17 日**，两者时间不同。这里不混入后续版本的任务或榜单。
 
-- [完整精读：Terminal-Bench 2.0 的任务、测试、结果和复现](/companies/bespoke-labs/terminal-bench)
+- [论文介绍：Terminal-Bench 的研究背景、任务设计与主要结论](/companies/bespoke-labs/terminal-bench)
 - [原始论文与完整作者名单](https://arxiv.org/abs/2601.11868v1)
 - [Snorkel 的 2.0 贡献说明](https://snorkel.ai/blog/terminal-bench-2-0-raising-the-bar-for-ai-agent-evaluation/)
 - [Terminal-Bench 2.0 与 Harbor 发布说明](https://www.tbench.ai/news/announcement-2-0)
