@@ -18,7 +18,7 @@ paperVersion: "Findings of ACL 2025 正式版，71 页，含附录 A.1–A.11；
 
 本文依据 [Findings of ACL 2025 正式论文](https://aclanthology.org/2025.findings-acl.958.pdf)。PDF 依次列出 Ved Sirdeshmukh、Kaustubh Deshpande、Johannes Mols，并将三人标为共同第一作者；所有作者均署名 Scale AI。ACL 网页的引文元数据将 Kaustubh 排在第一位，与 PDF 顺序不同，这里以论文首页为准。
 
-Ved Sirdeshmukh 参与了 Scale 的多轮对话评测工作。他在[本人公开主页](https://www.linkedin.com/in/ved-sirdeshmukh)分享 MultiChallenge 发布时，将其介绍为自己团队完成的基准，并说明工作来自 SEAL 与 Prompt Engineering 团队。公开资料不足以可靠补充他的学位和完整教育经历。
+Ved Sirdeshmukh 参与了 Scale 的多轮对话评测工作。他在[本人公开主页](https://www.linkedin.com/in/ved-sirdeshmukh)分享 MultiChallenge 发布时，将其介绍为自己团队完成的基准，并说明工作来自 SEAL 与 Prompt Engineering 团队。该主页还记录了 2017—2021 年在 Birla Institute of Technology and Science, Pilani（BITS Pilani）的教育经历，但没有明确展示学位名称。主页现在列出的 Labelbox 任职属于后续经历，本文仍以发表时的 Scale 署名为准。
 
 Kaustubh Deshpande 的背景连接了多模态表征与模型评测。他的[个人网站](https://kaus0399.github.io/)记录：2021 年毕业于 UC Davis，主修生物医学工程、辅修计算机科学；2023 年取得 UCLA 应用统计学硕士学位，论文比较 CLIP 表征空间中的对抗式无监督领域适应与零样本分类。他列出的研究兴趣包括多模态表征和生成模型的稳健性。
 
