@@ -25,7 +25,7 @@ const items = computed(() => works.filter(w => {
     </label>
     <label>关键词<input v-model="query" type="search" placeholder="名称、领域或工作类型" /></label>
   </div>
-  <p class="work-count">共 {{ items.length }} 项，按公开时间排列。未确认日期的工作列在末尾。</p>
+  <p class="work-count">共 {{ items.length }} 项，按公开时间从新到旧排列。未确认日期的工作列在末尾。</p>
   <ol class="work-timeline">
     <li v-for="work in items" :key="work.url">
       <div class="work-meta">{{ work.dateLabel }} · {{ work.kind }}<template v-if="!company"> · {{ companyName(work.company) }}</template></div>

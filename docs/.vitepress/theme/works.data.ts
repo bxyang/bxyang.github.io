@@ -20,6 +20,6 @@ export default createContentLoader('companies/*/*.md', {
       dateLabel: String(p.frontmatter.dateLabel ?? p.frontmatter.date ?? '发布日期未披露'),
       kind: String(p.frontmatter.kind ?? '研究'),
       description: String(p.frontmatter.description ?? '')
-    })).sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || a.title.localeCompare(b.title))
+    })).sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title))
   }
 })
