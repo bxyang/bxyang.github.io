@@ -15,7 +15,12 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/4447765?v=4' }]
+    ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/4447765?v=4' }],
+    ['script', {
+      type: 'module',
+      src: 'https://static.cloudflareinsights.com/beacon.min.js',
+      'data-cf-beacon': JSON.stringify({ token: '7b238f40c5e048948a2b8651a168ce0e' })
+    }]
   ],
 
   themeConfig: {
