@@ -1,0 +1,932 @@
+{
+  "updated": "2026-09-17",
+  "since": "2026-01-01",
+  "resources": [
+    {
+      "date": "2026-09-16",
+      "organization": "Microsoft",
+      "kind": "方法博客",
+      "title": "编程 Agent 评测的沙箱边界",
+      "url": "https://developer.microsoft.com/blog/your-ai-coding-agent-evaluation-is-only-as-good-as-its-sandbox/",
+      "summary": "区分模型自身解决问题与从环境取回答案，说明环境约束为何影响评测有效性。",
+      "date_evidence": "2026-09-16T09:09:51+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-13",
+      "organization": "Hamel Husain / Shreya Shankar",
+      "kind": "实践问答",
+      "title": "长执行轨迹的人工审阅方法",
+      "url": "https://hamel.dev/blog/posts/evals-faq/what-if-the-source-material-is-too-large-for-a-person-to-review.html",
+      "summary": "优先寻找最早的上游错误，并按需展开工具结果和相关证据。",
+      "date_evidence": "['2026-09-14', '2026-09-13']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-10",
+      "organization": "AWS",
+      "kind": "方法博客",
+      "title": "多轮对话中的 Agent 正确性指标",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
+      "summary": "把整体评分拆成可检查的评价环节，定位正确性在何处失效。",
+      "date_evidence": "2026-09-10T07:55:41-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-08",
+      "organization": "Sierra",
+      "kind": "基准发布",
+      "title": "Hyper-τ-bench：评测构建 Agent 的 Agent",
+      "url": "https://sierra.ai/blog/hyper-t-bench-evaluating-agents-that-build-agents",
+      "summary": "把需求理解、构建和测试其他 Agent 作为长任务评测对象。",
+      "date_evidence": "2026-09-08T20:25:11.202Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-08",
+      "organization": "AWS",
+      "kind": "工程方案",
+      "title": "用 GitHub Actions 自动运行 Agent 评测",
+      "url": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
+      "summary": "将 AgentCore、身份验证和评测执行接入代码变更流程。",
+      "date_evidence": "2026-09-08T08:23:21-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-03",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "READY：企业 Agent 的部署能力评测",
+      "url": "https://labs.scale.com/blog/ready",
+      "summary": "围绕行业工作流与人机协作，检验 Agent 在实际业务中的完成能力。",
+      "date_evidence": "['2026-09-17T10:50:50.519Z', '2026-09-17T10:50:50.519Z', '2026-09-03', '2026-09-03']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-02",
+      "organization": "Scale AI",
+      "kind": "方法博客",
+      "title": "计算机操作 Agent 的验证器设计",
+      "url": "https://labs.scale.com/blog/verifier-design-for-cua",
+      "summary": "讨论程序化验证器如何衡量任务完成，以及验证器本身的质量问题。",
+      "date_evidence": "['2026-09-17T10:49:49.657Z', '2026-09-17T10:49:49.657Z', '2026-09-02', '2026-09-02']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-01",
+      "organization": "Hamel Husain / Shreya Shankar",
+      "kind": "实践问答",
+      "title": "错误发现与评测器验证所需的样本",
+      "url": "https://hamel.dev/blog/posts/evals-faq/how-many-examples-do-i-need-for-an-eval.html",
+      "summary": "区分轨迹审阅、评测器校准和回归集构建三个阶段的数据需求。",
+      "date_evidence": "['2026-09-01', '2026-09-01']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-26",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "CliniCARE-Bench：临床 Agent 的决策过程",
+      "url": "https://labs.scale.com/blog/clinicare-bench",
+      "summary": "同时检查最终判断、证据充分性和调查过程是否遵守任务限制。",
+      "date_evidence": "['2026-09-17T10:49:50.083Z', '2026-09-17T10:49:50.083Z', '2026-08-26', '2026-08-26']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-26",
+      "organization": "AWS",
+      "kind": "工具方案",
+      "title": "通过 OpenTelemetry 评测不同框架的 Agent",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
+      "summary": "用统一轨迹接入 AgentCore Evaluations，减少对特定 SDK 的依赖。",
+      "date_evidence": "2026-08-26T11:13:35-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-25",
+      "organization": "OpenAI · Arize",
+      "kind": "访谈整理",
+      "title": "模型之外的 Agent 失败因素",
+      "url": "https://arize.com/blog/why-better-models-dont-fix-every-agent-failure/",
+      "summary": "Stuart Sy 讨论上下文、任务评测和可观测性为何影响生产表现。",
+      "date_evidence": "2026-08-25T15:15:52+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-25",
+      "organization": "LangChain",
+      "kind": "工程方案",
+      "title": "从世界描述构建 Agent 任务与环境",
+      "url": "https://www.langchain.com/blog/building-agent-environments-and-tasks",
+      "summary": "把轨迹、代码和人工输入转为环境规格，再生成可执行评测任务。",
+      "date_evidence": "['2026-08-25T14:56:46.382Z', '2026-08-25T18:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-24",
+      "organization": "Braintrust",
+      "kind": "工具方案",
+      "title": "Harbor 沙箱评测与 Braintrust 集成",
+      "url": "https://www.braintrust.dev/blog/harbor-agent-evals",
+      "summary": "将任务、评分和 Agent 轨迹同步为可比较的实验结果。",
+      "date_evidence": "24 August 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-20",
+      "organization": "Confident AI",
+      "kind": "方法博客",
+      "title": "从实际失败开始设计 Agent 评测",
+      "url": "https://www.confident-ai.com/blog/how-to-build-the-right-llm-evals",
+      "summary": "先识别需要解决的问题，再选择评价指标与测试方式。",
+      "date_evidence": "2026-08-20",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-19",
+      "organization": "NVIDIA",
+      "kind": "工具方案",
+      "title": "SkillEvaluator：评估 Skill 带来的实际变化",
+      "url": "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/",
+      "summary": "比较启用与未启用 Skill 的任务表现，并介绍安全检查与集成方式。",
+      "date_evidence": "2026-08-19T16:00:00+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-18",
+      "organization": "LangChain",
+      "kind": "工具方案",
+      "title": "针对用户感知错误的专用评测器",
+      "url": "https://www.langchain.com/blog/introducing-langsmith-tuned-evaluators-starting-with-perceived-error",
+      "summary": "介绍 Perceived Error 评测器，用对话中的用户体验信号评价 Agent。",
+      "date_evidence": "['2026-08-18T23:46:35.350Z', '2026-08-18T15:45:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-14",
+      "organization": "Uber · Arize",
+      "kind": "演讲整理",
+      "title": "Uber 的生产 Agent 评测实践",
+      "url": "https://arize.com/blog/how-uber-evaluates-ai-agents-at-production-scale/",
+      "summary": "Aayush Agrawal 介绍完整追踪、真实失败样本和跨团队评价工作流。",
+      "date_evidence": "2026-08-14T15:00:25+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-02",
+      "organization": "MLflow / Databricks",
+      "kind": "工程方案",
+      "title": "Agent Skill 的可测量改进流程",
+      "url": "https://mlflow.org/blog/evaluating-improving-agent-skills/",
+      "summary": "通过轨迹、数据集、自定义评分与实验追踪比较 Skill 版本。",
+      "date_evidence": "2026-08-02T00:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-31",
+      "organization": "LangChain",
+      "kind": "基准方案",
+      "title": "ReviewBench：从真实 PR 构建代码审查评测",
+      "url": "https://www.langchain.com/blog/evaluating-code-review-agents-with-reviewbench",
+      "summary": "将可信审查意见整理成可复现任务，评估代码审查 Agent 的实际帮助。",
+      "date_evidence": "['2026-07-31T16:58:55.261Z', '2026-07-31T20:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-29",
+      "organization": "Braintrust / Basis",
+      "kind": "开放方案",
+      "title": "Behavior Specs：长任务 Agent 的行为规范",
+      "url": "https://www.braintrust.dev/blog/behavior-specs",
+      "summary": "把执行过程中的行为要求写成可评价规范，补充最终结果评分。",
+      "date_evidence": "29 July 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-23",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "Terminal-Bench 3.0 的任务设计",
+      "url": "https://labs.scale.com/blog/terminal-bench-harder-tasks-for-better-agents",
+      "summary": "介绍更长、更困难的终端任务，以及 Scale 对基准任务集的贡献。",
+      "date_evidence": "['2026-09-17T10:33:34.165Z', '2026-09-17T10:33:34.165Z', '2026-07-23', '2026-07-23']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-23",
+      "organization": "LangChain",
+      "kind": "工程案例",
+      "title": "用 Harbor 运行 Deep Agents 端到端评测",
+      "url": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+      "summary": "从局部行为测试扩展到完整任务，统一运行环境与结果比较。",
+      "date_evidence": "['2026-07-23T17:55:43.331Z', '2026-07-23T16:55:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-23",
+      "organization": "AWS",
+      "kind": "工程方案",
+      "title": "Strands 与 AgentCore 的生产评测蓝图",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/",
+      "summary": "连接构建阶段测试和生产阶段评价，形成持续质量检查流程。",
+      "date_evidence": "2026-07-23T09:00:20-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-22",
+      "organization": "Langfuse",
+      "kind": "工程案例",
+      "title": "文档问答 Agent 的完整评测配置",
+      "url": "https://langfuse.com/blog/2026-07-16-steal-our-eval-setup",
+      "summary": "公开文档助手的评测设置，说明通用检查与应用专属指标如何组合。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17",
+      "note": "按正文 July 22, 2026 归周；URL 中的 07-16 不作为发布日期。"
+    },
+    {
+      "date": "2026-07-22",
+      "organization": "LangChain",
+      "kind": "工具方案",
+      "title": "Eval Engineering Skill：从代码和轨迹生成评测",
+      "url": "https://www.langchain.com/blog/towards-automating-eval-engineering",
+      "summary": "分析 Agent 的行为范围，经人工反馈形成可执行的任务与评测环境。",
+      "date_evidence": "['2026-07-22T17:18:09.840Z', '2026-07-22T16:55:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-21",
+      "organization": "OpenAI · Arize",
+      "kind": "演讲整理",
+      "title": "把用户反馈转成评测与产品改进信号",
+      "url": "https://arize.com/blog/how-openai-turns-user-feedback-into-product-improvements/",
+      "summary": "Stuart Sy 介绍反馈分类和失败模式发现；资料为活动方发布的文字整理。",
+      "date_evidence": "2026-07-21T16:02:34+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-20",
+      "organization": "LangChain",
+      "kind": "基准方案",
+      "title": "IssueBench：评测 Agent 的问题发现能力",
+      "url": "https://www.langchain.com/blog/issuebench-how-we-evaluate-engine",
+      "summary": "混合已知故障和正常轨迹，检查问题识别、分类及聚类质量。",
+      "date_evidence": "['2026-07-20T17:43:57.596Z', '2026-07-20T17:20:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-15",
+      "organization": "Langfuse",
+      "kind": "工程方案",
+      "title": "面向金融服务的 Agent 发布质量门槛",
+      "url": "https://langfuse.com/blog/2026-07-15-llm-certification-financial-services",
+      "summary": "用数据集、实验结果与 API 建立自动通过或阻止发布的流程。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-14",
+      "organization": "Anthropic",
+      "kind": "活动介绍",
+      "title": "面向产品团队的 Agent Evals 分享",
+      "url": "https://www.anthropic.com/webinars/evals-for-ai-agents-how-product-builders-get-the-most-out-of-every-new-model",
+      "summary": "官方活动页介绍多步 Agent 的评价、模型升级比较和产品级评测；未观看录像。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-10",
+      "organization": "Google Cloud",
+      "kind": "工程案例",
+      "title": "数据 Agent 的评测用例质量检查",
+      "url": "https://cloud.google.com/blog/products/data-analytics/evaluate-agent-performance",
+      "summary": "从实际开发经验讨论评测题目、上下文与评分本身的可靠性。",
+      "date_evidence": "['2026-07-10']",
+      "verified_on": "2026-09-17",
+      "note": "按 datePublished 2026-07-10 归周；部分地区页面显示 07-11，同属 W28。"
+    },
+    {
+      "date": "2026-07-08",
+      "organization": "Scale AI",
+      "kind": "对比实验",
+      "title": "在相同后端上比较 MCP 与 CLI",
+      "url": "https://labs.scale.com/blog/mcp-vs-cli",
+      "summary": "控制任务和工具后端，检验工具接口对 Agent 表现的影响。",
+      "date_evidence": "['2026-09-17T08:55:17.659Z', '2026-09-17T08:55:17.659Z', '2026-07-08', '2026-07-08']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-08",
+      "organization": "OpenAI",
+      "kind": "评测审查",
+      "title": "编程评测中的有效信号与题目缺陷",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+      "summary": "介绍对 SWE-bench Pro 的任务审查，将题目质量问题与模型能力区分开。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-07-07",
+      "organization": "LangChain",
+      "kind": "演讲整理",
+      "title": "从轨迹数据中发现 Agent 改进方向",
+      "url": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+      "summary": "围绕大规模轨迹分析，说明如何形成实验、评测和持续改进的数据基础。",
+      "date_evidence": "['2026-07-07T15:05:49.452Z', '2026-07-07T15:15:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-29",
+      "organization": "Hamel Husain",
+      "kind": "方法博客",
+      "title": "让 AI 产品结果更容易验证",
+      "url": "https://hamel.dev/blog/posts/eval-smell/",
+      "summary": "通过数据 Agent 等案例，讨论产品设计如何降低评测与用户核验的成本。",
+      "date_evidence": "['2026-06-29']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-26",
+      "organization": "Braintrust",
+      "kind": "方法博客",
+      "title": "状态型 Agent 的评测方法",
+      "url": "https://www.braintrust.dev/blog/stateful-agent-evals",
+      "summary": "把环境状态、历史操作、执行路径和最终结果共同纳入测试。",
+      "date_evidence": "26 June 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-25",
+      "organization": "Cursor",
+      "kind": "方法博客",
+      "title": "编程基准中的奖励投机与答案泄漏",
+      "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+      "summary": "审查 Agent 轨迹与运行环境，区分解决问题和检索已有答案。",
+      "date_evidence": "['2026-06-25T12:00:00.000Z', '2026-06-25T12:00:00.000Z', '2026-06-25T12:00:00.000Z', '2026-06-25T12:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-18",
+      "organization": "Hugging Face",
+      "kind": "工程案例",
+      "title": "用自有工具评测开放模型的 Agent 能力",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
+      "summary": "通过 agent-eval 检查工具使用和任务结果，比较工具接口及 Skill 的影响。",
+      "date_evidence": "['2026-06-18T00:00:00.709Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-16",
+      "organization": "Scale AI",
+      "kind": "工具方案",
+      "title": "Insights Generator：自动分析 Agent 失败模式",
+      "url": "https://labs.scale.com/blog/insights-generator",
+      "summary": "从大量执行轨迹中归纳行为问题，并给出证据及出现频率。",
+      "date_evidence": "['2026-09-17T08:55:17.723Z', '2026-09-17T08:55:17.723Z', '2026-06-16', '2026-06-16']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-15",
+      "organization": "AWS",
+      "kind": "工程方案",
+      "title": "用 Strands Evals 定位失败与根因",
+      "url": "https://aws.amazon.com/blogs/machine-learning/ai-agent-failure-detection-and-root-cause-analysis-with-strands-evals/",
+      "summary": "分析 Agent 执行过程，区分表现异常的位置与导致失败的原因。",
+      "date_evidence": "2026-06-15T10:07:59-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-13",
+      "organization": "Confident AI",
+      "kind": "工程方案",
+      "title": "Agent 评测中的人工审核流程",
+      "url": "https://www.confident-ai.com/blog/human-in-the-loop-ai-agent-evaluation",
+      "summary": "把专家标注、评分校准和数据集维护连接成可重复的工作流。",
+      "date_evidence": "2026-06-13",
+      "verified_on": "2026-09-17",
+      "note": "按 article:published_time 2026-06-13 归周；页面显示 06-15，与 modified_time 一致。"
+    },
+    {
+      "date": "2026-06-11",
+      "organization": "AWS",
+      "kind": "工具方案",
+      "title": "Agent-EvalKit 的系统化评测流程",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-ai-agents-systematically-with-agent-evalkit/",
+      "summary": "沿执行轨迹检查工具调用、返回信息和最终回答之间的一致性。",
+      "date_evidence": "2026-06-11T07:49:47-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-04",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "编程 Agent 的早期药物发现任务评测",
+      "url": "https://labs.scale.com/blog/coding-agents-drug-discovery",
+      "summary": "使用专家构建的科学工作任务，观察多步规划和完整流程的表现。",
+      "date_evidence": "['2026-09-17T09:20:33.618Z', '2026-09-17T09:20:33.618Z', '2026-06-04', '2026-06-04']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-06-02",
+      "organization": "Microsoft",
+      "kind": "工具方案",
+      "title": "ASSERT 与跨框架 Agent 信任方案",
+      "url": "https://devblogs.microsoft.com/foundry/build-2026-open-trust-stack-ai-agents/",
+      "summary": "把政策要求转为评测标准，并连接 Agent 运行过程中的控制机制。",
+      "date_evidence": "2026-06-02T17:10:00+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-29",
+      "organization": "OpenAI",
+      "kind": "方法博客",
+      "title": "可信第三方评测的设计与报告",
+      "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations/",
+      "summary": "说明评测主张、运行框架、预算和有效性证据之间的对应关系。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-28",
+      "organization": "AWS / LangChain",
+      "kind": "工程方案",
+      "title": "在 AWS 上用 LangSmith 评测 Deep Agents",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-deep-agents-using-langsmith-on-aws/",
+      "summary": "介绍长任务 Agent 的追踪与评测集成，比较不同配置的表现。",
+      "date_evidence": "2026-05-28T12:32:23-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-27",
+      "organization": "Scale AI",
+      "kind": "基准方案",
+      "title": "HiL-Dynamics：信息不足时的澄清行为",
+      "url": "https://labs.scale.com/blog/hil-dynamics",
+      "summary": "评估编程 Agent 面对不完整需求时，是否识别缺口并适时询问。",
+      "date_evidence": "['2026-09-17T09:25:47.501Z', '2026-09-17T09:25:47.501Z', '2026-05-27', '2026-05-27']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-21",
+      "organization": "Braintrust",
+      "kind": "方法博客",
+      "title": "Agent 架构演进与评测策略",
+      "url": "https://www.braintrust.dev/blog/six-generations-ai-agents",
+      "summary": "按不同架构讨论新增能力带来的失败模式，以及需要补充的评价方式。",
+      "date_evidence": "21 May 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-19",
+      "organization": "NVIDIA",
+      "kind": "方法博客",
+      "title": "生产 Agent 的评测设计",
+      "url": "https://developer.nvidia.com/blog/?p=116877",
+      "summary": "区分模型与 Agent 评测，介绍围绕实际任务建立评测流程的方法。",
+      "date_evidence": "2026-05-19T20:00:00+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-18",
+      "organization": "IBM Research",
+      "kind": "基准方案",
+      "title": "Open Agent Leaderboard 与 Exgentic",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+      "summary": "用统一协议连接不同 Agent 和任务集，比较完整系统的表现。",
+      "date_evidence": "['2026-05-18T14:12:58.778Z', '2026-05-18T14:21:51.769Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-14",
+      "organization": "Braintrust",
+      "kind": "方法博客",
+      "title": "对完整多轮对话进行评分",
+      "url": "https://www.braintrust.dev/blog/multi-turn-scoring",
+      "summary": "检查重复询问、前后矛盾和任务未完成等逐轮评分容易遗漏的问题。",
+      "date_evidence": "14 May 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-13",
+      "organization": "Sierra",
+      "kind": "基准发布",
+      "title": "τ-knowledge：企业知识检索与行动评测",
+      "url": "https://sierra.ai/blog/tau-knowledge",
+      "summary": "检查 Agent 能否在多轮对话中检索复杂知识库，并据此执行工具操作。",
+      "date_evidence": "2026-05-13T16:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-13",
+      "organization": "LangChain",
+      "kind": "工具方案",
+      "title": "LangSmith Engine 的失败发现与评测生成",
+      "url": "https://www.langchain.com/blog/introducing-langsmith-engine",
+      "summary": "分析生产轨迹和代码，提出问题、修复建议及相应评测。",
+      "date_evidence": "['2026-06-24T19:40:15.017Z', '2026-05-13T17:40:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-11",
+      "organization": "Braintrust",
+      "kind": "方法博客",
+      "title": "把执行轨迹与评测放在同一流程中",
+      "url": "https://www.braintrust.dev/blog/traces-and-evals-same-place",
+      "summary": "介绍从生产失败定位、样本回收，到验证修复的工作路径。",
+      "date_evidence": "11 May 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-08",
+      "organization": "Microsoft",
+      "kind": "工具方案",
+      "title": "Microsoft 365 Copilot Agent 评测工具预览",
+      "url": "https://devblogs.microsoft.com/microsoft365dev/announcing-the-public-preview-of-the-microsoft-365-copilot-agent-evaluations-tool/",
+      "summary": "提供命令行评测与结果检查，把质量验证接入开发工作流。",
+      "date_evidence": "2026-05-08T20:51:57+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-05-01",
+      "organization": "Sierra",
+      "kind": "基准发布",
+      "title": "τ-voice：实时语音 Agent 的任务完成评测",
+      "url": "https://sierra.ai/blog/tau-voice-benchmarking-real-time-voice-agents-on-real-world-tasks",
+      "summary": "在真实音频条件下同时检查对话表现、工具操作和最终任务结果。",
+      "date_evidence": "2026-05-01T16:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-30",
+      "organization": "Cursor",
+      "kind": "工程案例",
+      "title": "用线上与离线实验改进 Agent Harness",
+      "url": "https://cursor.com/blog/continually-improving-agent-harness",
+      "summary": "介绍运行框架变更的评价方法，以及如何发现和修复质量退化。",
+      "date_evidence": "['2026-04-30T12:00:00.000Z', '2026-04-30T12:00:00.000Z', '2026-04-30T12:00:00.000Z', '2026-04-30T12:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-23",
+      "organization": "Axium Industries · Arize",
+      "kind": "访谈整理",
+      "title": "工业场景 Agent 的上下文与评测",
+      "url": "https://arize.com/blog/ai-agents-in-production-context-evaluation/",
+      "summary": "Tobias Leong 讨论供应链等生产场景中，领域信息和评测对可靠性的作用。",
+      "date_evidence": "2026-04-23T14:09:36+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-22",
+      "organization": "MLflow / Databricks",
+      "kind": "工程方案",
+      "title": "从开发到生产的评测与可观测性流程",
+      "url": "https://mlflow.org/blog/structured-ai-eval/",
+      "summary": "把追踪、数据集、评分和人工反馈组成持续迭代流程。",
+      "date_evidence": "2026-04-22T00:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-15",
+      "organization": "Salesforce",
+      "kind": "工具方案",
+      "title": "Agentforce 的对话级测试与自定义评分",
+      "url": "https://www.salesforce.com/blog/agentforce-testing-center/?bc=OTH",
+      "summary": "通过模拟用户、多轮对话和发布门槛，验证客服 Agent 的任务完成情况。",
+      "date_evidence": "2026-04-15T13:00:00+00:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-14",
+      "organization": "Sierra",
+      "kind": "工程案例",
+      "title": "从真实对话构建检索评测数据",
+      "url": "https://sierra.ai/blog/evaluating-and-improving-search",
+      "summary": "按生产对话更新参考文章，持续检查客服 Agent 的检索质量。",
+      "date_evidence": "2026-04-14T17:30:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-09",
+      "organization": "MLflow / Databricks",
+      "kind": "工具方案",
+      "title": "从生产轨迹自动发现质量问题",
+      "url": "https://mlflow.org/blog/issue-detection/",
+      "summary": "按正确性、延迟、执行和安全等维度归纳问题，并追踪处理状态。",
+      "date_evidence": "2026-04-09T00:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-09",
+      "organization": "LangChain",
+      "kind": "工程方案",
+      "title": "在 Agent 改进中引入专家判断",
+      "url": "https://www.langchain.com/blog/human-judgment-in-the-agent-improvement-loop",
+      "summary": "把领域专家的隐性标准转成数据、评价准则与迭代反馈。",
+      "date_evidence": "['2026-06-16T18:05:06.695Z', '2026-04-09T17:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-08",
+      "organization": "Braintrust",
+      "kind": "工具方案",
+      "title": "用 CLI 驱动 Agent 评测开发",
+      "url": "https://www.braintrust.dev/blog/agentic-eval-development",
+      "summary": "让编码 Agent 运行评测、检查失败、修改系统，再执行对比实验。",
+      "date_evidence": "8 April 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-06",
+      "organization": "Confident AI",
+      "kind": "方法博客",
+      "title": "评测通过后仍可能遗漏的 Agent 问题",
+      "url": "https://www.confident-ai.com/blog/your-ai-agent-passes-evals-thats-the-problem",
+      "summary": "讨论只检查最终输出的局限，以及执行过程中的失败模式。",
+      "date_evidence": "2026-04-06",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-04-01",
+      "organization": "Langfuse",
+      "kind": "工程案例",
+      "title": "客服 Agent 的高信号生产监控",
+      "url": "https://langfuse.com/blog/2026-04-01-llm-as-a-judge-production-monitoring",
+      "summary": "用模型评分识别用户不满等行为信号，补充异常率和延迟监控。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-31",
+      "organization": "LangChain",
+      "kind": "方法博客",
+      "title": "从执行轨迹到 Agent 改进闭环",
+      "url": "https://www.langchain.com/blog/traces-start-agent-improvement-loop",
+      "summary": "把线上失败转成评测样本，再比较修改前后的表现。",
+      "date_evidence": "['2026-04-23T08:26:54.583Z', '2026-03-31T07:59:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-31",
+      "organization": "AWS",
+      "kind": "工具方案",
+      "title": "AgentCore Evaluations 的使用方法",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-reliable-ai-agents-with-amazon-bedrock-agentcore-evaluations/",
+      "summary": "介绍 Agent 行为评分与生产质量监控，强调非确定性任务需要重复试验。",
+      "date_evidence": "2026-03-31T14:11:23-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-27",
+      "organization": "LangWatch",
+      "kind": "工程案例",
+      "title": "用 Scenario 模拟测试 Agent Skills",
+      "url": "https://langwatch.ai/blog/how-we-test-agent-skills-with-scenario-simulations",
+      "summary": "通过模拟交互检查 Skill 行为，把人工试用转成可重复的测试。",
+      "date_evidence": "['2026-03-27T00:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-27",
+      "organization": "Braintrust",
+      "kind": "方法博客",
+      "title": "用评测表达 AI 产品需求",
+      "url": "https://www.braintrust.dev/blog/evals-are-the-new-prd",
+      "summary": "把期望行为写成可重复的验收条件，并随产品迭代更新。",
+      "date_evidence": "27 March 2026",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-26",
+      "organization": "LangChain",
+      "kind": "工程案例",
+      "title": "Deep Agents 的评测集构建方法",
+      "url": "https://www.langchain.com/blog/how-we-build-evals-for-deep-agents",
+      "summary": "介绍任务来源、行为指标和小范围实验，避免为分数优化而偏离产品需求。",
+      "date_evidence": "['2026-06-16T18:02:58.634Z', '2026-03-26T15:18:56.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-24",
+      "organization": "Langfuse",
+      "kind": "工程案例",
+      "title": "用 Autoresearch 优化 Skill 时的测试经验",
+      "url": "https://langfuse.com/blog/2026-03-24-optimizing-ai-skill-with-autoresearch",
+      "summary": "展示自动优化如何暴露测试目标的问题，以及评测设计对优化方向的影响。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-18",
+      "organization": "Sierra",
+      "kind": "基准发布",
+      "title": "τ³-Bench：扩展知识与语音任务评测",
+      "url": "https://sierra.ai/blog/bench-advancing-agent-benchmarking-to-knowledge-and-voice",
+      "summary": "在对话任务完成评测中加入企业知识检索和实时语音交互。",
+      "date_evidence": "2026-03-18T16:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-18",
+      "organization": "AWS",
+      "kind": "工程方案",
+      "title": "Strands Evals 的生产评测流程",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-for-production-a-practical-guide-to-strands-evals/",
+      "summary": "介绍评测数据、评分方法和重复测试，检查 Agent 的过程与最终结果。",
+      "date_evidence": "2026-03-18T07:54:09-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-12",
+      "organization": "LangWatch",
+      "kind": "工具方案",
+      "title": "通过 MCP 创建与运行 Agent 评测",
+      "url": "https://langwatch.ai/blog/introducing-langwatch-mcp-test-and-evaluate-ai-agents-without-leaving-your-workflow",
+      "summary": "让编码助手在现有工作流中生成测试场景、执行评测并查看结果。",
+      "date_evidence": "['2026-03-12T00:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-11",
+      "organization": "Scale AI",
+      "kind": "评测方法",
+      "title": "Agentic Rubrics：代码修复的动态评分标准",
+      "url": "https://labs.scale.com/blog/agentic-rubrics",
+      "summary": "让 Agent 探索代码库，形成检查清单，再据此评价候选修复。",
+      "date_evidence": "['2026-09-17T10:50:48.614Z', '2026-09-17T10:50:48.614Z', '2026-03-11', '2026-03-11']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-11",
+      "organization": "Cursor",
+      "kind": "工程案例",
+      "title": "CursorBench 与线上、离线质量评测",
+      "url": "https://cursor.com/blog/cursorbench",
+      "summary": "介绍内部编程任务集，以及基准结果与用户实际体验之间的联系。",
+      "date_evidence": "['2026-03-11T12:00:00.000Z', '2026-03-11T12:00:00.000Z', '2026-03-11T12:00:00.000Z', '2026-03-11T12:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-05",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "VeRO：评测 Agent 优化其他 Agent 的能力",
+      "url": "https://labs.scale.com/blog/vero",
+      "summary": "通过修改提示、工具和控制逻辑，检查系统优化能力及迁移局限。",
+      "date_evidence": "['2026-09-17T09:25:47.529Z', '2026-09-17T09:25:47.529Z', '2026-03-05', '2026-03-05']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-04",
+      "organization": "Scale AI",
+      "kind": "基准发布",
+      "title": "SWE Atlas：真实代码库中的工程任务",
+      "url": "https://scale.com/blog/swe-atlas",
+      "summary": "用可复现的沙箱和实际工程问题，扩展对编程 Agent 的评价范围。",
+      "date_evidence": "['2026-03-04T22:25:00.000Z', '2026-09-09T18:50:50Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-03-02",
+      "organization": "Hamel Husain / Shreya Shankar",
+      "kind": "工具方案",
+      "title": "为编码 Agent 提供评测工作流 Skill",
+      "url": "https://hamel.dev/blog/posts/evals-skills/",
+      "summary": "把错误分析、评测审查和评测器设计整理成可复用的工作步骤。",
+      "date_evidence": "['2026-08-31', '2026-03-02']",
+      "verified_on": "2026-09-17",
+      "note": "首次发布 2026-03-02；2026-08-31 为修改日期。"
+    },
+    {
+      "date": "2026-02-26",
+      "organization": "Langfuse",
+      "kind": "工程案例",
+      "title": "Agent Skill 的评测与迭代",
+      "url": "https://langfuse.com/blog/2026-02-26-evaluate-ai-agent-skills",
+      "summary": "用数据集、执行轨迹和评分检查 Skill 是否被调用，以及是否正确完成任务。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-25",
+      "organization": "Galileo",
+      "kind": "工程方案",
+      "title": "持续 Agent 评测流水线",
+      "url": "https://galileo.ai/blog/building-continuous-agent-evaluation-pipelines",
+      "summary": "把行为评分、线上监控和发布回归检查连接起来，识别传统运行指标看不到的错误。",
+      "date_evidence": "['2026-02-25T00:00:00.000Z', '2026-02-25T00:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-24",
+      "organization": "MLflow / Databricks",
+      "kind": "工具方案",
+      "title": "多轮对话评测与用户模拟",
+      "url": "https://mlflow.org/blog/multiturn-evaluation/",
+      "summary": "介绍对话级评分与模拟用户，捕捉逐轮检查遗漏的上下文和任务完成问题。",
+      "date_evidence": "2026-02-24T00:00:00.000Z",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-23",
+      "organization": "OpenAI · Latent Space",
+      "kind": "访谈",
+      "title": "SWE-bench Verified 的局限与下一代评测",
+      "url": "https://www.latent.space/p/swe-bench-dead",
+      "summary": "Mia Glaese 与 Olivia Watkins 讨论数据污染、题目质量和更开放的工作任务。",
+      "date_evidence": "['2026-02-23T20:03:11+00:00', '2026-02-23T20:03:11+00:00']",
+      "verified_on": "2026-09-17",
+      "note": "按访谈上线日 2026-02-23 归周。"
+    },
+    {
+      "date": "2026-02-23",
+      "organization": "OpenAI",
+      "kind": "评测审查",
+      "title": "SWE-bench Verified 的题目质量与污染问题",
+      "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+      "summary": "介绍停止采用该基准衡量前沿编程能力的原因，包括题目缺陷与答案污染。",
+      "date_evidence": "原文页面 February 23, 2026；web 原文核查",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-18",
+      "organization": "AWS",
+      "kind": "工程案例",
+      "title": "Amazon 内部 Agent 评测经验",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-real-world-lessons-from-building-agentic-systems-at-amazon/",
+      "summary": "从实际系统出发，介绍统一评测流程与覆盖不同 Agent 行为的指标库。",
+      "date_evidence": "2026-02-18T11:21:28-08:00",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-17",
+      "organization": "Scale AI",
+      "kind": "基准方案",
+      "title": "LHAW：长任务中的信息缺失与澄清",
+      "url": "https://labs.scale.com/blog/LHAW",
+      "summary": "可控地生成信息不足的任务，评价 Agent 发现缺口与恢复任务表现的能力。",
+      "date_evidence": "['2026-09-17T10:45:04.752Z', '2026-09-17T10:45:04.752Z', '2026-02-17', '2026-02-17']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-05",
+      "organization": "Anthropic",
+      "kind": "方法博客",
+      "title": "编程 Agent 评测中的基础设施噪声",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary": "说明 CPU、内存等运行条件如何影响基准分数，以及比较结果时需要控制的变量。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-02-02",
+      "organization": "LangWatch",
+      "kind": "方法博客",
+      "title": "离线实验、在线评测与运行时防护",
+      "url": "https://langwatch.ai/blog/llm-evaluations-explained-experiments-online-evaluations-guardrails-and-when-to-use-each-in-2026",
+      "summary": "区分三类机制在 Agent 开发和运行过程中的用途。",
+      "date_evidence": "['2026-02-02T00:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-01-29",
+      "organization": "OpenAI",
+      "kind": "工程案例",
+      "title": "内部数据 Agent 的构建与评测",
+      "url": "https://openai.com/index/inside-our-in-house-data-agent/",
+      "summary": "介绍数据分析 Agent 的上下文、工具和评测反馈如何共同支持迭代。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-01-29",
+      "organization": "LangWatch",
+      "kind": "工程方案",
+      "title": "用场景测试验证 Agent 的完整行为",
+      "url": "https://langwatch.ai/blog/how-to-test-ai-agents-with-langwatch-mastra-google-adk-and-ship-them-reliably",
+      "summary": "结合 Mastra 和 Google ADK，介绍多轮模拟与端到端测试流程。",
+      "date_evidence": "['2026-01-29T00:00:00.000Z']",
+      "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-01-17",
+      "organization": "Brex · Latent Space",
+      "kind": "访谈",
+      "title": "Brex 的多轮 Agent 评测实践",
+      "url": "https://www.latent.space/p/brexs-ai-hail-mary-with-cto-james",
+      "summary": "James Reggio 介绍企业多 Agent 架构，以及从标准操作流程到多轮评测的演进。",
+      "date_evidence": "['2026-01-17T16:00:00+00:00', '2026-01-17T16:00:00+00:00']",
+      "verified_on": "2026-09-17",
+      "note": "按访谈上线日 2026-01-17 归周。"
+    },
+    {
+      "date": "2026-01-09",
+      "organization": "Anthropic",
+      "kind": "方法博客",
+      "title": "Agent 评测的基本方法",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "summary": "梳理任务、运行轨迹、评分器和多次试验，说明不同类型 Agent 的评测设计。",
+      "date_evidence": "原文正文显示日期；已核对官方页面",
+      "verified_on": "2026-09-17"
+    }
+  ]
+}

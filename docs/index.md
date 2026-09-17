@@ -15,8 +15,15 @@ hero:
     - theme: alt
       text: 公司研究
       link: /companies
+    - theme: alt
+      text: Agent Eval 周报
+      link: /agent-eval
 
 features:
+  - title: Agent Eval 周报
+    details: 工业界关于 Agent 评测的技术博客、访谈和工程方案，按周整理。
+    link: /agent-eval
+    linkText: 查看每周资料
   - title: 论文笔记
     details: 读一篇记一篇，重点是能回头用的推导和结论，不是摘要。
   - title: 公司研究
@@ -30,6 +37,12 @@ features:
 <script setup>
 import { data as posts } from './.vitepress/theme/posts.data'
 </script>
+
+## Agent Eval 周报
+
+跟踪工业界如何评估大模型 Agent，收集技术博客、访谈与工程方案，按发布周归档，最新在前。
+
+[浏览周报与资料索引 →](/agent-eval)
 
 ## 最新文章
 
