@@ -1,7 +1,27 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-21",
   "since": "2026-01-01",
   "resources": [
+    {
+      "date": "2026-09-20",
+      "organization": "LangChain（评测 TypeSafe AI 的 Jev）",
+      "kind": "实验博客",
+      "title": "用 Jev 评估 Agent 的稳定性、准确性与成本",
+      "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+      "summary": "将天气 Agent 的五条固定运行记录交给 Jev 和多个语言模型重复评分，并以人工标注检查准确性。介绍直接返回类型化判断的评测方式，比较评分波动、延迟与成本；结果限于这组小规模任务，稳定性不等于准确性。",
+      "date_evidence": "正文署名 Daniel Shea、Seán Roche；日期 September 20, 2026。",
+      "verified_on": "2026-09-21"
+    },
+    {
+      "date": "2026-09-18",
+      "organization": "Confident AI",
+      "kind": "产品更新",
+      "title": "以人工标注触发评测和评分校准",
+      "url": "https://www.confident-ai.com/docs/changelog/2026/9/18",
+      "summary": "发布由人工标注触发的工作流：审核后运行指标，检查自动判断与人工反馈的差异。配合运行轨迹搜索、标注队列状态和定时导出，将样本复核接入持续评测流程。",
+      "date_evidence": "官方更新日志标题 September 18, 2026。",
+      "verified_on": "2026-09-21"
+    },
     {
       "date": "2026-09-16",
       "organization": "Microsoft",
@@ -23,6 +43,16 @@
       "verified_on": "2026-09-17"
     },
     {
+      "date": "2026-09-11",
+      "organization": "Confident AI",
+      "kind": "产品更新",
+      "title": "发布前评测检查与不稳定指标识别",
+      "url": "https://www.confident-ai.com/docs/changelog/2026/9/11",
+      "summary": "为 GitHub、GitLab 的评测检查加入代码变更扫描，并增加不稳定指标识别、多审核者标注和指标对齐。同期发布 Confident Trace，采集 Agent、模型和工具调用轨迹，为回归检查与错误分析提供运行数据。",
+      "date_evidence": "官方更新日志标题 September 11, 2026。",
+      "verified_on": "2026-09-21"
+    },
+    {
       "date": "2026-09-10",
       "organization": "AWS",
       "kind": "方法博客",
@@ -31,6 +61,16 @@
       "summary": "把整体评分拆成可检查的评价环节，定位正确性在何处失效。",
       "date_evidence": "2026-09-10T07:55:41-08:00",
       "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-09",
+      "organization": "Braintrust",
+      "kind": "实验博客",
+      "title": "区分模型服务延迟与前端 Agent 的整任务表现",
+      "url": "https://www.braintrust.dev/evals/kimi-k3-serving-stacks",
+      "summary": "比较 Moonshot 与 Fireworks 提供的 Kimi K3 服务，分别测试单次请求延迟和截图经 Figma 转为 HTML 的完整任务。使用相同设计的重复运行评估质量、耗时与工具调用；单次请求更快，并未在这组实验中形成明确的整任务耗时或质量优势。",
+      "date_evidence": "正文日期 9 September 2026，署名 Jess Wang；官方研究目录日期一致。",
+      "verified_on": "2026-09-21"
     },
     {
       "date": "2026-09-08",
@@ -51,6 +91,16 @@
       "summary": "将 AgentCore、身份验证和评测执行接入代码变更流程。",
       "date_evidence": "2026-09-08T08:23:21-08:00",
       "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-04",
+      "organization": "Braintrust",
+      "kind": "实验博客",
+      "title": "评测 Agent 对生产轨迹的调查与处理能力",
+      "url": "https://www.braintrust.dev/evals/loop-vs-mcp-agent-investigations",
+      "summary": "让 Loop 与 Braintrust MCP + Codex 使用相同模型和轨迹数据，完成成本分析、发布回归、交付失败等五类调查。以人工编写的答案和确定性检查分别评估结论、引用证据及执行动作；每个场景仅运行一次，两套工具的仓库访问能力也有差别。",
+      "date_evidence": "正文日期 4 September 2026，署名 Izzy Hurley；官方研究目录日期一致。",
+      "verified_on": "2026-09-21"
     },
     {
       "date": "2026-09-03",
@@ -81,6 +131,16 @@
       "summary": "区分轨迹审阅、评测器校准和回归集构建三个阶段的数据需求。",
       "date_evidence": "['2026-09-01', '2026-09-01']",
       "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-08-31",
+      "organization": "Braintrust",
+      "kind": "实验博客",
+      "title": "比较搜索工具对 Agent 回答质量的影响",
+      "url": "https://www.braintrust.dev/evals/search-relevance-eval",
+      "summary": "以 1,329 道新闻事件问题比较无搜索、You.com 搜索及模型内置搜索，固定问题与搜索调用预算，记录完整轨迹。配对分析回答准确率、证据质量、延迟和成本，同时区分检索层变化与模型变化，并检查不同评分方法的分歧。",
+      "date_evidence": "正文日期 31 August 2026，署名 Izzy Hurley；官方研究目录日期一致。",
+      "verified_on": "2026-09-21"
     },
     {
       "date": "2026-08-26",

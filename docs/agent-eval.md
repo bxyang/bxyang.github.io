@@ -7,13 +7,21 @@ description: "工业界大模型 Agent 评测的博客、访谈与工程方案�
 
 跟踪工业界如何评估大模型 Agent：从任务和评分标准，到多轮交互、运行环境、线上监控与失败分析。收集公司技术博客、从业者访谈、公开演讲及可执行的评测方案。
 
-最近检索：**2026-09-17** · 累计 **92 条**资料。每周补充，按原始发布周归档，最新在前。
+最近检索：**2026-09-21** · 累计 **98 条**资料。每周补充，按原始发布周归档，最新在前。
 
 ## 按年查看
 
-- [2026 年周列表 · 92 条资料](/agent-eval/2026)
+- [2026 年周列表 · 98 条资料](/agent-eval/2026)
 
 ## 最近收录
+
+- **09-20 · LangChain（评测 TypeSafe AI 的 Jev） · 实验博客** — [用 Jev 评估 Agent 的稳定性、准确性与成本](https://www.langchain.com/blog/jev-agent-evals-langsmith)
+
+  将天气 Agent 的五条固定运行记录交给 Jev 和多个语言模型重复评分，并以人工标注检查准确性。介绍直接返回类型化判断的评测方式，比较评分波动、延迟与成本；结果限于这组小规模任务，稳定性不等于准确性。
+
+- **09-18 · Confident AI · 产品更新** — [以人工标注触发评测和评分校准](https://www.confident-ai.com/docs/changelog/2026/9/18)
+
+  发布由人工标注触发的工作流：审核后运行指标，检查自动判断与人工反馈的差异。配合运行轨迹搜索、标注队列状态和定时导出，将样本复核接入持续评测流程。
 
 - **09-16 · Microsoft · 方法博客** — [编程 Agent 评测的沙箱边界](https://developer.microsoft.com/blog/your-ai-coding-agent-evaluation-is-only-as-good-as-its-sandbox/)
 
@@ -23,21 +31,13 @@ description: "工业界大模型 Agent 评测的博客、访谈与工程方案�
 
   优先寻找最早的上游错误，并按需展开工具结果和相关证据。
 
+- **09-11 · Confident AI · 产品更新** — [发布前评测检查与不稳定指标识别](https://www.confident-ai.com/docs/changelog/2026/9/11)
+
+  为 GitHub、GitLab 的评测检查加入代码变更扫描，并增加不稳定指标识别、多审核者标注和指标对齐。同期发布 Confident Trace，采集 Agent、模型和工具调用轨迹，为回归检查与错误分析提供运行数据。
+
 - **09-10 · AWS · 方法博客** — [多轮对话中的 Agent 正确性指标](https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/)
 
   把整体评分拆成可检查的评价环节，定位正确性在何处失效。
-
-- **09-08 · Sierra · 基准发布** — [Hyper-τ-bench：评测构建 Agent 的 Agent](https://sierra.ai/blog/hyper-t-bench-evaluating-agents-that-build-agents)
-
-  把需求理解、构建和测试其他 Agent 作为长任务评测对象。
-
-- **09-08 · AWS · 工程方案** — [用 GitHub Actions 自动运行 Agent 评测](https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/)
-
-  将 AgentCore、身份验证和评测执行接入代码变更流程。
-
-- **09-03 · Scale AI · 基准发布** — [READY：企业 Agent 的部署能力评测](https://labs.scale.com/blog/ready)
-
-  围绕行业工作流与人机协作，检验 Agent 在实际业务中的完成能力。
 
 ## 收录方式
 
