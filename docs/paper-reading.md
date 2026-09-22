@@ -11,4 +11,4 @@ description: 记录论文的阅读、分析与思考。
 
 [RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift)
 
-**已更新作者背景与开篇示例，其余章节撰写中** · 涵盖八类失效、扎根理论、三种 IRR 指标的定义与计算，以及自动诊断实验。
+**已更新至第 2 节：研究背景** · 涵盖八类失效、扎根理论、三种 IRR 指标的定义与计算，以及自动诊断实验。
