@@ -24,8 +24,10 @@ features:
     details: 工业界关于 Agent 评测的技术博客、访谈和工程方案，按周整理。
     link: /agent-eval
     linkText: 查看每周资料
-  - title: 论文笔记
-    details: 读一篇记一篇，重点是能回头用的推导和结论，不是摘要。
+  - title: 论文精读
+    details: 记录论文的阅读、分析与思考，分享对研究问题和方法的理解。
+    link: /paper-reading
+    linkText: 查看精读分享
   - title: 公司研究
     details: 大模型数据公司的发展、创始人背景，以及论文、基准与产品时间线。
   - title: 公式与代码
@@ -43,6 +45,14 @@ import { data as posts } from './.vitepress/theme/posts.data'
 跟踪工业界如何评估大模型 Agent，收集技术博客、访谈与工程方案，按发布周归档，最新在前。
 
 [浏览周报与资料索引 →](/agent-eval)
+
+## 论文精读
+
+记录对论文的深入阅读与分享。
+
+第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 精读内容整理中
+
+[浏览论文精读 →](/paper-reading)
 
 ## 最新文章
 

@@ -26,6 +26,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '文章', link: '/posts' },
+      { text: '论文精读', link: '/paper-reading' },
       { text: '公司研究', link: '/companies' },
       { text: 'Agent Eval 周报', link: '/agent-eval' },
       { text: '标签', link: '/tags' },
@@ -34,6 +35,10 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/paper-reading': [
+        { text: '论文精读', link: '/paper-reading' },
+        { text: 'RIFT', link: '/paper-reading/rift' }
+      ],
       '/companies': [
         { text: '概览', link: '/companies' },
         { text: '论文、基准与产品', link: '/research' },
