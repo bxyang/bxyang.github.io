@@ -1,14 +1,14 @@
 ---
 title: "RIFT 精读：评分标准的八类失效与自动诊断"
-description: "精读大纲：rubric 失效分类、扎根理论、三种 IRR 指标与自动诊断实验。"
+description: "已更新论文与作者背景；后续将展开 rubric 失效分类、扎根理论、IRR 指标与自动诊断实验。"
 ---
 
 [← 论文精读](/paper-reading)
 
 # RIFT 精读：评分标准的八类失效与自动诊断
 
-::: info 大纲已发布，正文撰写中
-本文先发布精读大纲，后续按此结构逐节补充案例、概念解释与实验分析。
+::: info 持续更新
+已完成第 0 节“论文与作者背景”。第 1—6 节保留写作大纲，后续逐节补充。
 :::
 
 **论文：** RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics
@@ -21,9 +21,35 @@ description: "精读大纲：rubric 失效分类、扎根理论、三种 IRR 指
 
 ## 0. 论文与作者背景
 
-- 介绍作者团队、Snorkel AI 及相关机构背景。
-- 说明这项研究与 rubric 数据质量的关系。
-- 交代论文版本与研究定位。
+### 论文的来源与版本
+
+RIFT 是 Snorkel AI 团队关于评分标准质量的一项研究。论文共有七位作者，依次为 Zhengyang Qi、Charles Dickens、Derek Pham、Amanda Dsouza、Armin Parchami、Frederic Sala 和 Paroma Varma。七位作者均署名 Snorkel AI，Frederic Sala 同时署名威斯康星大学麦迪逊分校。这里的 rubric 指用于评价模型回答的一组评分标准；论文研究的是这些标准在设计和组织上可能出现的问题。[论文首页](https://arxiv.org/html/2604.01375v2)
+
+论文于 **2026 年 4 月 1 日**首次提交 arXiv，**4 月 20 日**更新为 v2，本文以 v2 为阅读依据。OpenReview 上另有题名前带有 `[SHORT]` 的版本，首页标明发表于 **ICLR 2026 的第三届 DATA-FM workshop**。[arXiv 版本记录](https://arxiv.org/abs/2604.01375v2) · [workshop 版本](https://openreview.net/pdf?id=tCxZYDLvuu)
+
+### 第一作者：Zhengyang Qi
+
+**Zhengyang Qi（Jason Qi）** 的公司作者页将其职位列为研究科学家（Research Scientist）。他的研究经历涉及前沿 AI、大规模机器学习系统和社会科学中的应用分析；研究兴趣强调智能体与环境的交互，以及细粒度反馈和可靠奖励在学习中的作用。[Snorkel AI 作者介绍](https://snorkel.ai/author/zhengyang-jason-qi/)
+
+在 RIFT 之前，他已参与 Snorkel AI 的 *Automating Benchmark Design*，该工作于 2025 年 10 月公开，研究如何借助 LLM 自动调整动态评测基准。两项工作的关注点分别是评测任务的设计与评分标准的质量，体现了他在模型评测方向上的研究经历。[公司论文记录](https://snorkel.ai/author/paroma-varma/)
+
+### 第二作者：Charles Dickens
+
+**Charles Dickens** 的公司作者页将其职位列为高级应用研究科学家（Senior Applied Research Scientist）。他的研究方向包括机器学习、结构化图数据建模和符号推理，应用涉及语言模型、计算机视觉及推荐系统等。[Snorkel AI 作者介绍](https://snorkel.ai/author/charles-dickens/)
+
+他与 Chris Glaze 在 2025 年 9 月合写了 *The Science of Rubric Design*，讨论评分标准的结构、质量测量与迭代改进。文章已明确区分两个目标：评分是否符合任务目标，以及不同评分者能否形成一致判断。这为理解 RIFT 后来对可靠性和有效性的区分提供了直接背景。[评分标准设计文章](https://snorkel.ai/blog/the-science-of-rubric-design/)
+
+### 其他作者与机构背景
+
+作者团队中，**Frederic Sala** 同时具有学术界和产业界背景。他是威斯康星大学麦迪逊分校计算机科学系助理教授、Snorkel AI 首席科学家，曾在 UCLA 获得电气工程博士学位，并在斯坦福大学从事博士后研究。他的研究涉及以数据为中心的 AI、基础模型与自动化机器学习。[个人主页](https://pages.cs.wisc.edu/~fredsala/)
+
+**Paroma Varma** 是 Snorkel AI 联合创始人、研究负责人，拥有斯坦福大学电气工程博士学位。她的研究关注如何让领域专家在缺少大规模标注数据时构建机器学习系统，曾将相关方法应用于医学影像和自动驾驶。Derek Pham、Amanda Dsouza 和 Armin Parchami 也以 Snorkel AI 作者身份参与本论文。[Paroma Varma 作者介绍](https://snorkel.ai/author/paroma-varma/) · [论文署名](https://arxiv.org/html/2604.01375v2)
+
+Snorkel AI 于 2019 年从斯坦福 AI 实验室的研究中创立，早期工作围绕数据编程和弱监督展开。目前，公司业务涵盖专家数据集、模型与 Agent 的运行环境、评测框架及定制 AI 系统。[公司介绍](https://snorkel.ai/company/)
+
+把这一背景与论文放在一起，可以看到它们共同关注如何将领域知识转化为模型能够使用的监督信号。RIFT 将研究对象具体落到评分标准：当专家要求被写成 rubric 后，如何检查这些要求是否清楚、完整，以及是否会引导出有意义的评分。关于公司的发展与其他工作，可参见本站的 [Snorkel AI 公司研究](/companies/snorkel-ai)。
+
+*作者职位与背景依据 2026 年 9 月核查的公开资料；论文中的机构关系以 v2 署名为准。*
 
 ## 1. 从一个评分失效的例子开始
 
@@ -97,4 +123,4 @@ description: "精读大纲：rubric 失效分类、扎根理论、三种 IRR 指
 
 ---
 
-分类与方法的原始定义参见论文正文第 3、4 节及附录 B、C、D；引入案例参见附录 E。正文完成前，本页作为文章结构预览。
+分类与方法的原始定义参见论文正文第 3、4 节及附录 B、C、D；引入案例参见附录 E。第 1—6 节目前为写作大纲。
