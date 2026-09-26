@@ -50,7 +50,7 @@ import { data as posts } from './.vitepress/theme/posts.data'
 
 记录对论文的深入阅读与分享。
 
-第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 2 节：研究背景
+第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 3.1 节：三个维度的含义
 
 [浏览论文精读 →](/paper-reading)
 
