@@ -1,6 +1,6 @@
 ---
 title: "RIFT 精读：评分标准的八类失效与自动诊断"
-description: "介绍 RIFT 的分类构建、一致性指标与失效分布，并分析直接及间接诊断方法、实验结果和模型间一致性。"
+description: "介绍 RIFT 的分类构建、一致性指标与失效分布，并分析直接及间接诊断方法、实验结果、模型间一致性与两个漏检案例。"
 ---
 
 [← 论文精读](/paper-reading)
@@ -8,7 +8,7 @@ description: "介绍 RIFT 的分类构建、一致性指标与失效分布，并
 # RIFT 精读：评分标准的八类失效与自动诊断
 
 ::: info 持续更新
-已完成摘要翻译及第 0—2 节，涵盖作者背景、开篇示例与研究背景。第 3 节已完成三个维度及八类失效的例子与判断边界；第 4.1—4.2 节已补充扎根理论与分类构建过程；第 4.3 节已补充 PWA、Cohen’s κ 与 Krippendorff’s α 的计算及应用场景；第 4.4 节已补充一致性结果与解释边界；第 4.5 节已补充人工与合成 rubric 的失效分布；第 5.1 节已补充模型直接诊断的方法与实验结果；第 5.2 节已补充间接诊断的逻辑、信号与结果；第 5.3 节已补充方法比较与模型间一致性；第 5.4—5.5 节及第 6 节待展开。
+已完成摘要翻译及第 0—2 节，涵盖作者背景、开篇示例与研究背景。第 3 节已完成三个维度及八类失效的例子与判断边界；第 4.1—4.2 节已补充扎根理论与分类构建过程；第 4.3 节已补充 PWA、Cohen’s κ 与 Krippendorff’s α 的计算及应用场景；第 4.4 节已补充一致性结果与解释边界；第 4.5 节已补充人工与合成 rubric 的失效分布；第 5.1 节已补充模型直接诊断的方法与实验结果；第 5.2 节已补充间接诊断的逻辑、信号与结果；第 5.3 节已补充方法比较与模型间一致性；第 5.4 节已补充两个漏检案例；第 5.5 节及第 6 节待展开。
 :::
 
 **论文：** RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics
@@ -888,9 +888,70 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 
 投票是一种汇总方式，模型间一致性描述判断是否相同，F1 则描述相对于专家标签的识别表现。三者提供不同信息。下一节结合具体漏检案例，继续分析模型没有识别出的 rubric 问题。
 
-### 5.4 从案例理解模型漏检（待展开）
+### 5.4 从案例理解模型漏检
 
-结合附录 E 的 JSON 导入 SQLite 和 C# 死锁案例，引用英文原文，分析模型漏掉的失效及原因。
+附录 E 分析了两个假阴性案例：专家认为 rubric 存在某种失效，自动诊断却没有标记。两例中，模型都已发现其他问题，但仍漏掉了 Hackable 或 Ungrounded。以下引用保留关键英文原文，中文说明结合作者分析；这些是论文报告的案例，不是本文重新运行模型得到的结果。[附录 E](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+
+#### JSON 导入 SQLite：详细讲解可能掩盖任务没有完成
+
+附录将任务概述为：
+
+> “User has a JSON file with contacts and wants to save the data to SQLite.”
+
+用户有一个包含联系人信息的 JSON 文件，希望将数据保存到 SQLite。相关 rubric 摘录为：
+
+> “A better answer should provide a clear, structured explanation with detailed step-by-step guidance, including contextual reasoning for each action (e.g., explaining why parameterized queries are used to prevent SQL injection). It should also ensure accessibility for users of all experience levels by explicitly outlining the logical flow, critical steps (e.g., creating tables, handling file encoding), and practical implementation details (e.g., specifying utf-8 encoding for JSON files).”
+
+这段标准要求清晰、有结构的分步讲解，解释操作原因，照顾不同经验水平的用户，并明确逻辑流程、关键步骤与实现细节。作者指出，它奖励了教程式表达，却没有要求可工作的代码，也没有检查 JSON 是否真正被解析并存入数据库。因此，回答可以写得详尽、专业，同时包含错误或不完整的实现。[原案例](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+
+附录列出的标签为：
+
+> **Human labels:** `missing_criteria, non_atomic, subjective_terms, hackable`
+>
+> **AI labels:** `missing_criteria, non_atomic, subjective_terms`
+
+模型发现了标准遗漏、非原子化和主观措辞，却漏掉 Hackable。遗漏功能正确性的检查，还产生了进一步的后果：回答者可以优化 rubric 奖励的表达特征，而不真正完成任务。
+
+作者在同一案例上再次提问。在要求明确解释拒绝原因的标准提示下，模型仍拒绝标记 Hackable，理由是：
+
+> “The rubric doesn’t rely on easily gameable numeric proxies (e.g., ‘at least 10 bullets,’ ‘at least 5 citations’). While it is generic, it’s not obviously ‘pad with length/items to win’ in the proxy-metric sense described by the taxonomy.”
+
+模型认为标准没有使用容易被利用的数字要求，如要点或引用的最低数量，因此不符合它理解的代理指标取巧。作者据此分析，模型把 Hackable 理解得过窄：它寻找显式数量要求，却漏掉篇幅、结构与教程式讲解同样可能成为替代任务成功的评分依据。
+
+随后，作者改用专门提示，要求模型设想回答者如何利用 rubric 取巧。模型提出了写长篇结构化教程、加入看似合理却不完整或有细微错误的代码等策略，并改变判断。其最终结论是：
+
+> “A responder can plausibly achieve ‘top marks’ by optimizing proxy signals the rubric rewards—structure, step-by-step formatting, beginner-friendly narration, and namedropping best practices—without actually delivering a correct, prompt-aligned solution.”
+
+也就是说，回答者可能通过优化结构、步骤格式、面向初学者的叙述和最佳实践术语来获得高评价，而没有交付正确、符合任务要求的方案。
+
+这次提示变化说明，模型在明确引导下能够识别该案例中的可取巧性，标准提示却没有触发相应判断。它不能证明同样的提示改动能普遍解决 Hackable，也没有证明真实生成的取巧回答已经在实际评分中获得高分；附录报告的是诊断模型提出了利用策略，并改变了失效标签。[作者的提示对照分析](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+
+#### C# 死锁：提出了要求，却没有提供验证程序
+
+第二个案例涉及 C# 死锁。附录引用的核心标准是：
+
+> “avoids the deadlock issue”
+
+即“避免死锁问题”。这个要求已经存在，高层含义也清楚，但作者指出 rubric 没有给出测试用例、预期行为、执行设置或通过／失败规则。评审者需要自行补充 C# 异步行为相关知识，并独立决定如何确认方案有效。这对应 Ungrounded：可检查的要求缺少足够依据或程序，难以被一致验证。
+
+附录报告的标准提示下模型理由是：
+
+> “The rubric is weak because it relies on broad criteria such as whether the solution is ‘clear and implementable’ and whether the response directly addresses the request. It also combines multiple requirements in a single criterion, including relevance, tone, and style. These issues make the rubric subjective, non-atomic, and low-signal.”
+
+模型注意到“清晰且可实现”等笼统要求，也指出相关性、语气和风格被混在同一条标准中，将问题归为主观、非原子化和信号不足。但它没有继续检查：评审者应依据什么证据、在什么条件下，确认代码确实避免了死锁。
+
+作者将这种漏检解释为，模型注意到了 rubric 的一般性弱点，却没有识别缺少验证程序这一关键问题。这里需要区分要求缺失与验证依据缺失：rubric 已经要求避免死锁，缺少的是足以支持一致检查的信息。附录没有给出这个案例的完整任务与完整 rubric，也没有报告类似前例的改提示后成功纠正结果，不能自行补全。[C# 案例与分析](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+
+#### 两个案例共同说明的诊断缺口
+
+| 案例 | 模型已注意到的问题 | 漏掉的进一步判断 |
+| --- | --- | --- |
+| JSON → SQLite | 主观措辞、要求混杂、标准遗漏 | 是否可以靠优化表达特征获得高评价，同时没有完成任务 |
+| C# 死锁 | 标准笼统、要求混杂、信号不足 | 是否提供验证技术要求所需的证据与程序 |
+
+识别出部分问题，不代表诊断已经完整。Hackable 需要进一步考虑回答者如何利用评分规则；Ungrounded 需要进一步检查评审者能否验证要求，而不只判断要求在文字上是否清楚。这些案例解释了可能的漏检机制，不能用来估计此类错误在所有任务中的发生比例。
+
+附录 E 还使用了 `Hackable or Proxy-Based Scoring`、`Ungrounded Verification` 等名称，并在 C# 分析中出现 `Trivial` 标签，与主表命名不完全一致。它开头提到的 F1 为 0.444 和 0.545，与表 3 对应结果不同，未清楚交代二者关系。本文将附录用于定性案例分析，诊断效果仍按前文表 3 的口径报告，不混合这两组数值。
 
 ### 5.5 实验结果的解释边界（待展开）
 
@@ -905,4 +966,4 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 
 ---
 
-分类与方法的原始定义参见论文正文第 3、4 节及附录 B、C、D；邮件引入案例参见附录 D；自动诊断漏检案例参见附录 E。第 5.4—5.5 节及第 6 节目前为写作大纲。
+分类与方法的原始定义参见论文正文第 3、4 节及附录 B、C、D；邮件引入案例参见附录 D；自动诊断漏检案例参见附录 E。第 5.5 节及第 6 节目前为写作大纲。
