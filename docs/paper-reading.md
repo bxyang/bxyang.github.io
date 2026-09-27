@@ -11,4 +11,4 @@ description: 记录论文的阅读、分析与思考。
 
 [RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift)
 
-**已更新至第 4.5 节：人工与合成 rubric 的失效分布** · 已介绍八类失效、分类构建、一致性指标与结果，以及人工与合成 rubric 的失效分布；后续将展开自动诊断实验。
+**已更新至第 5.1 节：模型直接诊断与多数投票** · 已介绍八类失效、分类构建、一致性指标与结果，以及人工与合成 rubric 的失效分布；已补充模型直接诊断流程，后续将展开间接信号及实验结果。
