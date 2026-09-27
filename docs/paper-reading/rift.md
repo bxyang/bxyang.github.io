@@ -892,6 +892,14 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 
 附录 E 分析了两个假阴性案例：专家认为 rubric 存在某种失效，自动诊断却没有标记。两例中，模型都已发现其他问题，但仍漏掉了 Hackable 或 Ungrounded。以下引用保留关键英文原文，中文说明结合作者分析；这些是论文报告的案例，不是本文重新运行模型得到的结果。[附录 E](https://arxiv.org/html/2604.01375v2#APPENDIX5)
 
+#### 案例背景：代码功能验证与 rubric 评价
+
+对代码能否正确运行、是否修复指定问题，常用基准以执行验证为核心。HumanEval、MBPP 及其扩展通过测试检查生成代码，LiveCodeBench 对竞赛编程回答进行执行评估，SWE-bench 则应用补丁并运行相关测试。EvalPlus 扩充测试用例，也说明有测试不等于已完整覆盖所有正确性要求。[EvalPlus](https://evalplus.github.io/)、[LiveCodeBench](https://livecodebench.github.io/)、[SWE-bench](https://github.com/SWE-bench/SWE-bench)
+
+Rubric 仍可用于代码解释、方案约束或 Agent 行为过程等评价，并与功能测试结合。例如，已有研究使用行为 rubric 构建 coding agent 的 critic，用于轨迹筛选等任务；这与通过测试检查最终代码功能属于不同层次。[A Rubric-Supervised Critic from Sparse Real-World Outcomes](https://arxiv.org/abs/2603.03800)
+
+因此，下面两个案例用于解释自动诊断可能遗漏的 rubric 问题，不能代表主流代码基准的评价方式。测试可以保存在评估系统中，不一定出现在用户提示或 rubric 正文里。判断是否缺少验证依据，需要结合评审者实际可用的测试、工具与执行环境；仅凭文字未列测试，不能认定完整评估流程没有测试。
+
 #### JSON 导入 SQLite：详细讲解可能掩盖任务没有完成
 
 附录将任务概述为：
@@ -902,7 +910,7 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 
 > “A better answer should provide a clear, structured explanation with detailed step-by-step guidance, including contextual reasoning for each action (e.g., explaining why parameterized queries are used to prevent SQL injection). It should also ensure accessibility for users of all experience levels by explicitly outlining the logical flow, critical steps (e.g., creating tables, handling file encoding), and practical implementation details (e.g., specifying utf-8 encoding for JSON files).”
 
-这段标准要求清晰、有结构的分步讲解，解释操作原因，照顾不同经验水平的用户，并明确逻辑流程、关键步骤与实现细节。作者指出，它奖励了教程式表达，却没有要求可工作的代码，也没有检查 JSON 是否真正被解析并存入数据库。因此，回答可以写得详尽、专业，同时包含错误或不完整的实现。[原案例](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+这段标准要求清晰、有结构的分步讲解，解释操作原因，照顾不同经验水平的用户，并明确逻辑流程、关键步骤与实现细节。作者指出，它奖励了教程式表达，却没有要求可工作的代码，也没有检查 JSON 是否真正被解析并存入数据库。在作者描述的这段标准下，回答可能写得详尽、专业，同时包含错误或不完整的实现。[原案例](https://arxiv.org/html/2604.01375v2#APPENDIX5)
 
 附录列出的标签为：
 
@@ -910,7 +918,7 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 >
 > **AI labels:** `missing_criteria, non_atomic, subjective_terms`
 
-模型发现了标准遗漏、非原子化和主观措辞，却漏掉 Hackable。遗漏功能正确性的检查，还产生了进一步的后果：回答者可以优化 rubric 奖励的表达特征，而不真正完成任务。
+模型发现了标准遗漏、非原子化和主观措辞，却漏掉 Hackable。作者指出的进一步风险是：如果评分主要依据这些表达要求，又没有功能验证作为获得高分的必要条件，回答者可能优化 rubric 奖励的表达特征，而不真正完成任务。
 
 作者在同一案例上再次提问。在要求明确解释拒绝原因的标准提示下，模型仍拒绝标记 Hackable，理由是：
 
@@ -926,13 +934,15 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 
 这次提示变化说明，模型在明确引导下能够识别该案例中的可取巧性，标准提示却没有触发相应判断。它不能证明同样的提示改动能普遍解决 Hackable，也没有证明真实生成的取巧回答已经在实际评分中获得高分；附录报告的是诊断模型提出了利用策略，并改变了失效标签。[作者的提示对照分析](https://arxiv.org/html/2604.01375v2#APPENDIX5)
 
+如果完整评分流程另有执行测试，并将通过测试作为获得高分的必要条件，上述取巧策略就未必奏效。附录展示的是 rubric 片段与诊断分析，没有足够信息证明包含外部测试的完整评估系统也能被同样利用。
+
 #### C# 死锁：提出了要求，却没有提供验证程序
 
 第二个案例涉及 C# 死锁。附录引用的核心标准是：
 
 > “avoids the deadlock issue”
 
-即“避免死锁问题”。这个要求已经存在，高层含义也清楚，但作者指出 rubric 没有给出测试用例、预期行为、执行设置或通过／失败规则。评审者需要自行补充 C# 异步行为相关知识，并独立决定如何确认方案有效。这对应 Ungrounded：可检查的要求缺少足够依据或程序，难以被一致验证。
+即“避免死锁问题”。这个要求已经存在，高层含义也清楚，但作者指出 rubric 没有给出测试用例、预期行为、执行设置或通过／失败规则。按作者对该案例的描述，评审者需要自行补充 C# 异步行为相关知识，并独立决定如何确认方案有效，因此作者将其归为 Ungrounded：可检查的要求缺少足够依据或程序，难以被一致验证。
 
 附录报告的标准提示下模型理由是：
 
@@ -941,6 +951,8 @@ Hackable 提供了一个具体例子。表 4 中，GPT-5.2 与 Gemini 3 Pro 的�
 模型注意到“清晰且可实现”等笼统要求，也指出相关性、语气和风格被混在同一条标准中，将问题归为主观、非原子化和信号不足。但它没有继续检查：评审者应依据什么证据、在什么条件下，确认代码确实避免了死锁。
 
 作者将这种漏检解释为，模型注意到了 rubric 的一般性弱点，却没有识别缺少验证程序这一关键问题。这里需要区分要求缺失与验证依据缺失：rubric 已经要求避免死锁，缺少的是足以支持一致检查的信息。附录没有给出这个案例的完整任务与完整 rubric，也没有报告类似前例的改提示后成功纠正结果，不能自行补全。[C# 案例与分析](https://arxiv.org/html/2604.01375v2#APPENDIX5)
+
+如果评审者已能调用适当的测试、获得执行条件或使用明确的验证程序，rubric 正文没有重复这些信息，并不自动意味着完整评估缺少验证依据。对这个案例，附录公开的信息不足以独立确认外部验证资源的情况，应保留作者归因与完整系统判断之间的边界。
 
 #### 两个案例共同说明的诊断缺口
 
