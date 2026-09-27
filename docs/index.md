@@ -50,7 +50,7 @@ import { data as posts } from './.vitepress/theme/posts.data'
 
 记录对论文的深入阅读与分享。
 
-第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 5.1 节：模型直接诊断的方法与结果
+第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 5.2 节：间接诊断的逻辑、信号与结果
 
 [浏览论文精读 →](/paper-reading)
 
