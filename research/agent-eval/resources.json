@@ -1,7 +1,48 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-30",
   "since": "2026-01-01",
   "resources": [
+    {
+      "date": "2026-09-24",
+      "organization": "Arize AI / TypeSafe AI",
+      "kind": "工程方案",
+      "title": "将 Jev 接入 Agent 轨迹的远程评测",
+      "url": "https://arize.com/blog/jev-remote-evaluator/",
+      "summary": "用 FastAPI 将 Arize AX 的运行记录交给 Jev，返回请求是否得到解决的标签与概率，并介绍历史及新增记录的评测配置。强调应按标注数据选择阈值；仅提供请求和回复不能证明实际动作完成，需补充工具或交易证据。",
+      "date_evidence": "正文署名 Sally-Ann DeLucia、Jim Bennett；官方 WordPress API date=2026-09-24T11:38:36。",
+      "verified_on": "2026-09-30",
+      "note": "正文只显示月份，按官方文章 API 的原始发布日期归档，不采用搜索结果的相对日期。"
+    },
+    {
+      "date": "2026-09-23",
+      "organization": "Braintrust",
+      "kind": "活动问答整理",
+      "title": "从生产轨迹发现问题并建立回归评测",
+      "url": "https://www.braintrust.dev/blog/patterns-topics-loop-faq",
+      "summary": "官方工作坊文字问答说明 Patterns、Topics 与 Loop 的分工：从采样轨迹发现问题，扩大调查范围，再将确认的失败转成评测。介绍用行为规范约束分析目标，以及发现问题与测量影响范围的区别；提要依据页面文字，未观看视频。",
+      "date_evidence": "正文日期 23 September 2026，署名 Hossein Niazmandi、Rahil Sondhi。",
+      "verified_on": "2026-09-30"
+    },
+    {
+      "date": "2026-09-22",
+      "organization": "LangChain（整理 Abridge、Included Health 实践）",
+      "kind": "工程案例",
+      "title": "将临床复核转为可复用的 Agent 评测",
+      "url": "https://www.langchain.com/blog/reliability-healthcare-ai-langsmith-use-cases",
+      "summary": "介绍从临床反馈归纳失效、校准专用 judge、复核生产对话，再把标签和多轮模拟用于发布检查的流程。区分参考答案评测与直接对照原始会话的评测；采用官方文字案例，不将配套视频视为已观看。",
+      "date_evidence": "正文与官方博客目录日期 September 22, 2026；署名 Morgan Lo。",
+      "verified_on": "2026-09-30"
+    },
+    {
+      "date": "2026-09-21",
+      "organization": "LangChain / TypeSafe AI",
+      "kind": "产品方案",
+      "title": "在 LangSmith 中配置 Jev 在线评测",
+      "url": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals",
+      "summary": "将运行记录或对话映射为待评估状态，再用是非、分类或等级问题返回结构化反馈，接入筛选、告警与工作流。说明有类型的窄判断与需要书面理由的开放判断的适用差异；引用的是此前单个天气 Agent 的小规模实验，并非新的普遍准确率证明。",
+      "date_evidence": "正文及官方目录日期 September 21, 2026；署名 Winston Huynh。",
+      "verified_on": "2026-09-30"
+    },
     {
       "date": "2026-09-20",
       "organization": "LangChain（评测 TypeSafe AI 的 Jev）",
@@ -23,6 +64,27 @@
       "verified_on": "2026-09-21"
     },
     {
+      "date": "2026-09-18",
+      "organization": "Braintrust / TypeSafe AI",
+      "kind": "工程方案",
+      "title": "为 Agent 回复配置 Jev 类型化评分器",
+      "url": "https://www.braintrust.dev/blog/evaluate-agent-responses-with-jev",
+      "summary": "以客服回复能否发送为例，将质量要求拆成明确分类或等级，连接 Jev 评分器并检查轨迹。强调按实际输入和判断标准测试评分器，再用于离线实验或在线评分；返回概率不替代对评测器准确性的验证。",
+      "date_evidence": "正文日期 18 September 2026；署名 Izzy Hurley。",
+      "verified_on": "2026-09-30"
+    },
+    {
+      "date": "2026-09-17",
+      "organization": "Arize AI",
+      "kind": "产品方案",
+      "title": "将既有评测遗漏的轨迹失败转成回归用例",
+      "url": "https://arize.com/blog/how-to-find-and-debug-agent-failures-your-evals-are-missing/",
+      "summary": "介绍 Signal 对生产轨迹中的重复失败进行聚合，再由工程师确认预期行为、保存代表样本并建立评测。用工具失败后仍声称完成的情形说明最终回复评分的局限，区分发现未知问题、验证候选修复和人工发布决策。",
+      "date_evidence": "正文署名 Aaron Winston；官方 WordPress API date=2026-09-17T09:43:03。",
+      "verified_on": "2026-09-30",
+      "note": "正文只显示月份，按官方文章 API 的原始发布日期归档，不采用搜索结果的相对日期。"
+    },
+    {
       "date": "2026-09-16",
       "organization": "Microsoft",
       "kind": "方法博客",
@@ -31,6 +93,16 @@
       "summary": "区分模型自身解决问题与从环境取回答案，说明环境约束为何影响评测有效性。",
       "date_evidence": "2026-09-16T09:09:51+00:00",
       "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-15",
+      "organization": "IBM Research（Hugging Face 官方组织博客）",
+      "kind": "实验博客",
+      "title": "区分 Agent 平均成功率与重复运行一致性",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+      "summary": "在 AppWorld 上区分平均成功率、至少一次成功和每次均成功，展示平均表现可能掩盖重复运行失败。介绍对已记录决策步骤重新采样的 Consistency Analyzer，以及将不稳定步骤转为行为指引的实验；步骤诊断与完整任务重复验证分别进行。",
+      "date_evidence": "正文 Published September 15, 2026；作者列出 Evelyn Duesterwald 等，并显示 ibm-research 机构归属。",
+      "verified_on": "2026-09-30"
     },
     {
       "date": "2026-09-13",
@@ -121,6 +193,16 @@
       "summary": "讨论程序化验证器如何衡量任务完成，以及验证器本身的质量问题。",
       "date_evidence": "['2026-09-17T10:49:49.657Z', '2026-09-17T10:49:49.657Z', '2026-09-02', '2026-09-02']",
       "verified_on": "2026-09-17"
+    },
+    {
+      "date": "2026-09-02",
+      "organization": "AWS",
+      "kind": "工程方案",
+      "title": "生产 Agent 的分层评测与发布检查",
+      "url": "https://aws.amazon.com/blogs/industries/building-a-production-ai-agent-on-aws-a-six-pillar-walkthrough/",
+      "summary": "以业务流程 Agent 为例，将评测放入构建、发布和运行流程。在会话、轨迹及工具调用层检查目标完成和操作正确性，并用独立数据查询核验答案，配合安全与负载检查；这是一套参考方案，不是跨模型基准排名。",
+      "date_evidence": "正文署名 Sandeep Kulkarni、Chandana Keswarkar，日期 02 SEP 2026。",
+      "verified_on": "2026-09-30"
     },
     {
       "date": "2026-09-01",

@@ -7,13 +7,29 @@ description: "工业界大模型 Agent 评测的博客、访谈与工程方案�
 
 跟踪工业界如何评估大模型 Agent：从任务和评分标准，到多轮交互、运行环境、线上监控与失败分析。收集公司技术博客、从业者访谈、公开演讲及可执行的评测方案。
 
-最近检索：**2026-09-21** · 累计 **98 条**资料。每周补充，按原始发布周归档，最新在前。
+最近检索：**2026-09-30** · 累计 **106 条**资料。每周补充，按原始发布周归档，最新在前。
 
 ## 按年查看
 
-- [2026 年周列表 · 98 条资料](/agent-eval/2026)
+- [2026 年周列表 · 106 条资料](/agent-eval/2026)
 
 ## 最近收录
+
+- **09-24 · Arize AI / TypeSafe AI · 工程方案** — [将 Jev 接入 Agent 轨迹的远程评测](https://arize.com/blog/jev-remote-evaluator/)
+
+  用 FastAPI 将 Arize AX 的运行记录交给 Jev，返回请求是否得到解决的标签与概率，并介绍历史及新增记录的评测配置。强调应按标注数据选择阈值；仅提供请求和回复不能证明实际动作完成，需补充工具或交易证据。 **日期说明：**正文只显示月份，按官方文章 API 的原始发布日期归档，不采用搜索结果的相对日期。
+
+- **09-23 · Braintrust · 活动问答整理** — [从生产轨迹发现问题并建立回归评测](https://www.braintrust.dev/blog/patterns-topics-loop-faq)
+
+  官方工作坊文字问答说明 Patterns、Topics 与 Loop 的分工：从采样轨迹发现问题，扩大调查范围，再将确认的失败转成评测。介绍用行为规范约束分析目标，以及发现问题与测量影响范围的区别；提要依据页面文字，未观看视频。
+
+- **09-22 · LangChain（整理 Abridge、Included Health 实践） · 工程案例** — [将临床复核转为可复用的 Agent 评测](https://www.langchain.com/blog/reliability-healthcare-ai-langsmith-use-cases)
+
+  介绍从临床反馈归纳失效、校准专用 judge、复核生产对话，再把标签和多轮模拟用于发布检查的流程。区分参考答案评测与直接对照原始会话的评测；采用官方文字案例，不将配套视频视为已观看。
+
+- **09-21 · LangChain / TypeSafe AI · 产品方案** — [在 LangSmith 中配置 Jev 在线评测](https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals)
+
+  将运行记录或对话映射为待评估状态，再用是非、分类或等级问题返回结构化反馈，接入筛选、告警与工作流。说明有类型的窄判断与需要书面理由的开放判断的适用差异；引用的是此前单个天气 Agent 的小规模实验，并非新的普遍准确率证明。
 
 - **09-20 · LangChain（评测 TypeSafe AI 的 Jev） · 实验博客** — [用 Jev 评估 Agent 的稳定性、准确性与成本](https://www.langchain.com/blog/jev-agent-evals-langsmith)
 
@@ -22,22 +38,6 @@ description: "工业界大模型 Agent 评测的博客、访谈与工程方案�
 - **09-18 · Confident AI · 产品更新** — [以人工标注触发评测和评分校准](https://www.confident-ai.com/docs/changelog/2026/9/18)
 
   发布由人工标注触发的工作流：审核后运行指标，检查自动判断与人工反馈的差异。配合运行轨迹搜索、标注队列状态和定时导出，将样本复核接入持续评测流程。
-
-- **09-16 · Microsoft · 方法博客** — [编程 Agent 评测的沙箱边界](https://developer.microsoft.com/blog/your-ai-coding-agent-evaluation-is-only-as-good-as-its-sandbox/)
-
-  区分模型自身解决问题与从环境取回答案，说明环境约束为何影响评测有效性。
-
-- **09-13 · Hamel Husain / Shreya Shankar · 实践问答** — [长执行轨迹的人工审阅方法](https://hamel.dev/blog/posts/evals-faq/what-if-the-source-material-is-too-large-for-a-person-to-review.html)
-
-  优先寻找最早的上游错误，并按需展开工具结果和相关证据。
-
-- **09-11 · Confident AI · 产品更新** — [发布前评测检查与不稳定指标识别](https://www.confident-ai.com/docs/changelog/2026/9/11)
-
-  为 GitHub、GitLab 的评测检查加入代码变更扫描，并增加不稳定指标识别、多审核者标注和指标对齐。同期发布 Confident Trace，采集 Agent、模型和工具调用轨迹，为回归检查与错误分析提供运行数据。
-
-- **09-10 · AWS · 方法博客** — [多轮对话中的 Agent 正确性指标](https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/)
-
-  把整体评分拆成可检查的评价环节，定位正确性在何处失效。
 
 ## 收录方式
 
