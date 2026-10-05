@@ -37,3 +37,13 @@
 - Braintrust 工作坊问答依据已发布文字收录，未观看视频。IBM Research 文章核实了组织署名，非一般社区用户投稿。
 - Braintrust 09-21 的 Jev 实验比较 LLM-AggreFact 与 JudgeBench 的单轮判断，未作为端到端 Agent 评测新增。09-24 Nitro 主要是查询基础设施，未单列。
 - Arize 月度更新等候选没有取得明确日级首发证据，暂不归周。Google Cloud 09-29 的沙箱文章晚于本轮目标周，留待下一轮。旧文的九月更新不按新发布处理。
+
+## 每周检索：2026-10-05
+
+覆盖上一完整周 2026-09-28—10-04（W40），回查 09-05—10-04。新增 9 条：W40 七条，补漏 W39、W38 各一条，累计 115 条。不宣称全网穷尽。
+
+- 核查 Anthropic、Google Cloud、NVIDIA、LangChain、Multiverse Computing、Arize 与从业者一手正文，并检索主要模型公司、云厂商、评测工具及中文技术团队来源。
+- Arize 三篇正文仅显示月份，采用官方 WordPress REST API 的 date，并公开说明。Hamel 与 Shreya 问答首发 09-19、修改 09-21，归入 W38，未观看其中引用的视频。
+- Google Cloud 数据衡量沙箱启动效率；LangChain 是线上 A/B 实验；Arize 缓存比较同时改变模型与服务商，费用为估算。提要保留测量范围。
+- Anthropic 原始方法与 Arize 工程接入分别收录；Multiverse Computing 已核实组织署名，收录博客而非单独增加论文。
+- 持续更新的 Arize Agent Evaluation 指南、旧 AWS Agent EvalKit 文章和泛可观测性更新未作为当周新资料。未核实到足够明确的新增中文公司文章，未用社区转载替代。

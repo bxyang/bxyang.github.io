@@ -7,37 +7,37 @@ description: "工业界大模型 Agent 评测的博客、访谈与工程方案�
 
 跟踪工业界如何评估大模型 Agent：从任务和评分标准，到多轮交互、运行环境、线上监控与失败分析。收集公司技术博客、从业者访谈、公开演讲及可执行的评测方案。
 
-最近检索：**2026-09-30** · 累计 **106 条**资料。每周补充，按原始发布周归档，最新在前。
+最近检索：**2026-10-05** · 累计 **115 条**资料。每周补充，按原始发布周归档，最新在前。
 
 ## 按年查看
 
-- [2026 年周列表 · 106 条资料](/agent-eval/2026)
+- [2026 年周列表 · 115 条资料](/agent-eval/2026)
 
 ## 最近收录
 
-- **09-24 · Arize AI / TypeSafe AI · 工程方案** — [将 Jev 接入 Agent 轨迹的远程评测](https://arize.com/blog/jev-remote-evaluator/)
+- **10-02 · Arize AI · 实验博客** — [多轮购物 Agent 的缓存、成本与延迟比较](https://arize.com/blog/prompt-caching-benchmark/)
 
-  用 FastAPI 将 Arize AX 的运行记录交给 Jev，返回请求是否得到解决的标签与概率，并介绍历史及新增记录的评测配置。强调应按标注数据选择阈值；仅提供请求和回复不能证明实际动作完成，需补充工具或交易证据。 **日期说明：**正文只显示月份，按官方文章 API 的原始发布日期归档，不采用搜索结果的相对日期。
+  用 Harbor 执行 20 组多轮购物对话，每个模型与服务商组合重复运行五次，再用 Phoenix 记录缓存、延迟和估算成本。缓存复用率高不一定意味着总成本低；模型与服务商同时变化，费用未与账单核对，不能把差异全部归因于缓存。 **日期说明：**正文只显示月份，按官方文章 API 的原始发布日期归档。
 
-- **09-23 · Braintrust · 活动问答整理** — [从生产轨迹发现问题并建立回归评测](https://www.braintrust.dev/blog/patterns-topics-loop-faq)
+- **10-02 · Arize AI · 工程方案** — [从生产轨迹建立 Agent 的逐轮优化评测](https://arize.com/blog/claude-hillclimb-production-traces/)
 
-  官方工作坊文字问答说明 Patterns、Topics 与 Loop 的分工：从采样轨迹发现问题，扩大调查范围，再将确认的失败转成评测。介绍用行为规范约束分析目标，以及发现问题与测量影响范围的区别；提要依据页面文字，未观看视频。
+  以自动添加追踪的 coding skill 为例，将应用、模型和技能版本组成评测数据，用代码检查与 LLM judge 同时衡量质量、耗时和 token 用量。介绍隔离环境、防止读取参考实现，以及把生产失败纳入回归集；这是 Arize 对 hillclimb 流程的工程接入说明。 **日期说明：**正文只显示月份，按官方文章 API 的原始发布日期归档。
 
-- **09-22 · LangChain（整理 Abridge、Included Health 实践） · 工程案例** — [将临床复核转为可复用的 Agent 评测](https://www.langchain.com/blog/reliability-healthcare-ai-langsmith-use-cases)
+- **10-01 · LangChain · 实验博客** — [用线上 A/B 实验评估 coding Agent 的模型路由](https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness)
 
-  介绍从临床反馈归纳失效、校准专用 judge、复核生产对话，再把标签和多轮模拟用于发布检查的流程。区分参考答案评测与直接对照原始会话的评测；采用官方文字案例，不将配套视频视为已观看。
+  从 Open SWE 的真实任务轨迹归纳任务类型，在首次消息时选择模型档位，再比较合并 PR 的比例、用户反馈和成本。973 个会话的实验中，路由方案成本较低，合并率差异未达到统计显著；这不能证明两种方案质量完全相同。
 
-- **09-21 · LangChain / TypeSafe AI · 产品方案** — [在 LangSmith 中配置 Jev 在线评测](https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals)
+- **09-29 · Multiverse Computing · 技术博客** — [ProvenanceGuard：检查 MCP Agent 是否引用了正确来源](https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source)
 
-  将运行记录或对话映射为待评估状态，再用是非、分类或等级问题返回结构化反馈，接入筛选、告警与工作流。说明有类型的窄判断与需要书面理由的开放判断的适用差异；引用的是此前单个天气 Agent 的小规模实验，并非新的普遍准确率证明。
+  将回答拆成具体主张，保留 MCP 工具输出的来源标识，分别核查事实支持和来源归属，避免将其他来源中的事实误归到所引用的记录。介绍医疗 Agent 轨迹上的离线验证与修复；相似来源仍难区分，部分修复通过保守回退完成，不能等同于恢复了有用答案。
 
-- **09-20 · LangChain（评测 TypeSafe AI 的 Jev） · 实验博客** — [用 Jev 评估 Agent 的稳定性、准确性与成本](https://www.langchain.com/blog/jev-agent-evals-langsmith)
+- **09-29 · Google Cloud · 工程方案** — [为大规模 Agent 评测加速沙箱启动](https://cloud.google.com/blog/products/containers-kubernetes/accelerate-agentic-rl-with-gke-agent-sandbox)
 
-  将天气 Agent 的五条固定运行记录交给 Jev 和多个语言模型重复评分，并以人工标注检查准确性。介绍直接返回类型化判断的评测方式，比较评分波动、延迟与成本；结果限于这组小规模任务，稳定性不等于准确性。
+  介绍 GKE Agent Sandbox 如何缓解并行 Agent 训练和评测中的环境启动瓶颈，并衔接编排 SDK 与任务运行框架。以软件工程任务环境测试启动延迟和资源开销；加速结果衡量的是评测基础设施，不代表 Agent 任务成功率提高。
 
-- **09-18 · Confident AI · 产品更新** — [以人工标注触发评测和评分校准](https://www.confident-ai.com/docs/changelog/2026/9/18)
+- **09-28 · Arize AI / TypeSafe AI · 实验博客** — [用 judge 概率与重复判断识别需要人工复核的样例](https://arize.com/blog/jev-llm-judge-consistency/)
 
-  发布由人工标注触发的工作流：审核后运行指标，检查自动判断与人工反馈的差异。配合运行轨迹搜索、标注队列状态和定时导出，将样本复核接入持续评测流程。
+  在包含工具调用、工具响应处理等十类评测的 517 个标注样例上，比较 Jev 标签概率与 LLM 多次判断的不一致性，探索如何优先安排人工复核。重复运行没有增加独立样例数，部分错误数量很少；结果限于这些二分类任务，不能直接推广到开放式评分。 **日期说明：**正文只显示月份，按官方文章 API 的原始发布日期归档。
 
 ## 收录方式
 
