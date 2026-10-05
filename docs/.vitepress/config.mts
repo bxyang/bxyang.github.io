@@ -27,6 +27,7 @@ export default defineConfig({
     nav: [
       { text: '文章', link: '/posts' },
       { text: '论文精读', link: '/paper-reading' },
+      { text: 'Benchmark 精读', link: '/benchmark-reading' },
       { text: '公司研究', link: '/companies' },
       { text: 'Agent Eval 周报', link: '/agent-eval' },
       { text: '标签', link: '/tags' },
@@ -35,6 +36,9 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/benchmark-reading': [
+        { text: 'Benchmark 精读', link: '/benchmark-reading' }
+      ],
       '/paper-reading': [
         { text: '论文精读', link: '/paper-reading' },
         { text: 'RIFT', link: '/paper-reading/rift' }

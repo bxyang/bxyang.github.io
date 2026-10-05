@@ -28,6 +28,10 @@ features:
     details: 记录论文的阅读、分析与思考，分享对研究问题和方法的理解。
     link: /paper-reading
     linkText: 查看精读分享
+  - title: Benchmark 精读
+    details: 深入讨论经典 benchmark 的任务、数据与评分设计，理解评测结果的含义。
+    link: /benchmark-reading
+    linkText: 查看 Benchmark 精读
   - title: 公司研究
     details: 大模型数据公司的发展、创始人背景，以及论文、基准与产品时间线。
   - title: 公式与代码
@@ -50,9 +54,15 @@ import { data as posts } from './.vitepress/theme/posts.data'
 
 记录对论文的深入阅读与分享。
 
-第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 5.5 节：实验结果的解释边界
+第一篇：[RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics](/paper-reading/rift) · 已更新至第 6 节：诊断、人工复核、修改与验证
 
 [浏览论文精读 →](/paper-reading)
+
+## Benchmark 精读
+
+从具体任务出发，讨论经典 benchmark 如何构造数据、设置评估环境与评分规则，以及分数能够说明什么。
+
+[浏览 Benchmark 精读 →](/benchmark-reading)
 
 ## 最新文章
 
