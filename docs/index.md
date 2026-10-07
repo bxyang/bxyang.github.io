@@ -62,7 +62,7 @@ import { data as posts } from './.vitepress/theme/posts.data'
 
 从具体任务出发，讨论经典 benchmark 如何构造数据、设置评估环境与评分规则，以及分数能够说明什么。
 
-第一篇：[GDPval 精读：真实职业任务的设计、评估与结果解读](/benchmark-reading/gdpval) · 已更新至 3.1：行业与职业的选择依据
+第一篇：[GDPval 精读：真实职业任务的设计、评估与结果解读](/benchmark-reading/gdpval) · 已更新至 3.2：任务专家的招募与背景
 
 [浏览 Benchmark 精读 →](/benchmark-reading)
 
