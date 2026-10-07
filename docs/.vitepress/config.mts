@@ -37,7 +37,8 @@ export default defineConfig({
 
     sidebar: {
       '/benchmark-reading': [
-        { text: 'Benchmark 精读', link: '/benchmark-reading' }
+        { text: 'Benchmark 精读', link: '/benchmark-reading' },
+        { text: 'GDPval', link: '/benchmark-reading/gdpval' }
       ],
       '/paper-reading': [
         { text: '论文精读', link: '/paper-reading' },
